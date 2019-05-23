@@ -15,11 +15,10 @@ public class PaintCanvas extends JPanel {
     private actionHandler acts = new actionHandler();
 
     private static final Color BG = Color.WHITE;
-    private final int PLOT = 0, LINE = 1, SQUARE = 2, OVAL = 3, POLYGON = 4;
     int x1, x2, y1, y2;
     private Color colour = new Color(0, 0, 0);
-    private int selectedShape;
     private int shape = 0;
+    private boolean fill;
 
     private JPanel pnlBtns = new JPanel();
     private JPanel pnlCanvas = new JPanel();
@@ -28,17 +27,20 @@ public class PaintCanvas extends JPanel {
     private JButton btnRect = new JButton("RECTANGLE");
     private JButton btnOval = new JButton("OVAL");
     private JButton btnCol = new JButton("  ");
+    private JCheckBox btnFill = new JCheckBox("Fill");
 
     public PaintCanvas() {
         this.btnPlot.addActionListener(acts);
         this.btnLine.addActionListener(acts);
         this.btnRect.addActionListener(acts);
         this.btnOval.addActionListener(acts);
+        this.btnFill.addActionListener(acts);
         this.pnlBtns.add(this.btnPlot);
         this.pnlBtns.add(this.btnLine);
         this.pnlBtns.add(this.btnRect);
         this.pnlBtns.add(this.btnOval);
         this.pnlBtns.add(this.btnCol);
+        this.pnlBtns.add(this.btnFill);
         this.btnCol.setBackground(this.colour);
 
         this.add(this.pnlBtns, "North");
@@ -53,16 +55,24 @@ public class PaintCanvas extends JPanel {
         if (this.entries.isEmpty() == false) {
             for (int i = 0; i < this.entries.size(); ++i) {
                 if ((this.entries.get(i)).type == 0) {// if entry i is PLOT type
-                    g.fillRect(entries.get(i).x[0]-2,entries.get(i).y[0]-2,4,4 );// Draw Filled Square 4*4 pixels wide centered on mouse pointer
+                    g.fillRect(entries.get(i).x[0]-2,entries.get(i).y[0]-2,3,3 );// Draw Filled Square 3*3 pixels wide centered on mouse pointer
                 }
                 else if ((this.entries.get(i)).type == 1) {// if entry i is LINE type
                     g.drawLine(entries.get(i).x[0], entries.get(i).y[0], entries.get(i).x[1], entries.get(i).y[1]);
                 }
                 else if ((this.entries.get(i)).type == 2) {
-                    g.fillRect(entries.get(i).x[0], entries.get(i).y[0], entries.get(i).x[1]-entries.get(i).x[0] , entries.get(i).y[1]- entries.get(i).y[0]);
+                    if (entries.get(i).fill) {
+                        g.fillRect(entries.get(i).x[0], entries.get(i).y[0], entries.get(i).x[1] - entries.get(i).x[0], entries.get(i).y[1] - entries.get(i).y[0]);
+                    } else {
+                        g.drawRect(entries.get(i).x[0], entries.get(i).y[0], entries.get(i).x[1] - entries.get(i).x[0], entries.get(i).y[1] - entries.get(i).y[0]);
+                    }
                 }
                 else if ((this.entries.get(i)).type == 3) {
-                    g.fillOval(entries.get(i).x[0], entries.get(i).y[0], entries.get(i).x[1]-entries.get(i).x[0] , entries.get(i).y[1]- entries.get(i).y[0]);
+                    if (entries.get(i).fill) {
+                        g.fillOval(entries.get(i).x[0], entries.get(i).y[0], (entries.get(i).x[1] - entries.get(i).x[0]), entries.get(i).y[1] - entries.get(i).y[0]);
+                    } else {
+                        g.drawOval(entries.get(i).x[0], entries.get(i).y[0], (entries.get(i).x[1] - entries.get(i).x[0]), entries.get(i).y[1] - entries.get(i).y[0]);
+                    }
                 }
             }
         }
@@ -98,6 +108,13 @@ public class PaintCanvas extends JPanel {
         }
 
         public void mouseReleased(MouseEvent me) {
+
+            if (btnFill.isSelected()) {
+                fill = true;
+            } else {
+                fill = false;
+            }
+
             switch (PaintCanvas.this.shape) {
                 case 0:
                     x2 = me.getX();
@@ -115,13 +132,13 @@ public class PaintCanvas extends JPanel {
                 case 2:
                     x2 = me.getX();
                     y2 = me.getY();
-                    entries.add(new Rectangle(x1, y1, x2, y2, colour));
+                    entries.add(new Rectangle(x1, y1, x2, y2, colour, fill));
                     repaint();
                     break;
                 case 3:
                     x2 = me.getX();
                     y2 = me.getY();
-                    entries.add(new Oval(x1, y1, x2, y2, colour));
+                    entries.add(new Oval(x1, y1, x2, y2, colour, fill));
                     repaint();
                     break;
 
