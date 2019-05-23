@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="175d64e2-a0f0-4770-a953-465cea66e179" name="Default Changelist" comment="Added mouseClick events, throws a bunch of errors but its halfway to drawing shapes" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="UPDATE_CHANGES_POLICY" value="SHELVE" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/guiExploration/Wiring.java" />
+        <option value="$PROJECT_DIR$/src/guiExploration/Load.java" />
+        <option value="$PROJECT_DIR$/src/guiExploration/FileOpener.java" />
+        <option value="$PROJECT_DIR$/src/guiExploration/FileChoose.java" />
+        <option value="$PROJECT_DIR$/src/guiExploration/Panel.form" />
+        <option value="$PROJECT_DIR$/src/guiExploration/App.form" />
+        <option value="$PROJECT_DIR$/src/guiExploration/App.java" />
+        <option value="$PROJECT_DIR$/src/guiExploration/GUI.java" />
+        <option value="$PROJECT_DIR$/src/FileChoose.java" />
+        <option value="$PROJECT_DIR$/src/test.java" />
+        <option value="$PROJECT_DIR$/src/PaintPanel.java" />
+        <option value="$PROJECT_DIR$/src/Line.java" />
+        <option value="$PROJECT_DIR$/src/Plot.java" />
+        <option value="$PROJECT_DIR$/src/Rectangle.java" />
+        <option value="$PROJECT_DIR$/src/Shapes.java" />
+        <option value="$PROJECT_DIR$/src/Oval.java" />
+        <option value="$PROJECT_DIR$/src/Side.java" />
+        <option value="$PROJECT_DIR$/src/GUI.form" />
+        <option value="$PROJECT_DIR$/src/GUI.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="2576" />
+    <option name="height" value="1416" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558534081592" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="guiExploration" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.GUI (1)">
+    <configuration name="FileChoose" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="guiExploration.FileChoose" />
+      <module name="prac09-gui-solutions" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="guiExploration.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GUI (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GUI" />
+      <module name="Assignment 2.2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="guiExploration.GUI" />
+      <module name="prac09-gui-solutions" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="guiExploration.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Load" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="guiExploration.Load" />
+      <module name="prac09-gui-solutions" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="guiExploration.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PanelsAndWidgets" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="guiExploration.PanelsAndWidgets" />
+      <module name="prac09-gui-solutions" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="guiExploration.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.GUI (1)" />
+        <item itemvalue="Application.GUI" />
+        <item itemvalue="Application.FileChoose" />
+        <item itemvalue="Application.Load" />
+        <item itemvalue="Application.PanelsAndWidgets" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="175d64e2-a0f0-4770-a953-465cea66e179" name="Default Changelist" comment="" />
+      <created>1558064737079</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1558064737079</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Built GUI to basic specifications">
+      <created>1558065836418</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1558065836418</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Built GUI to basic specifications">
+      <created>1558066749051</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1558066749051</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Built GUI to basic specifications">
+      <created>1558067034749</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1558067034749</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Built GUI to basic specifications">
+      <created>1558076077472</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1558076077472</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Hotfixed leftover files">
+      <created>1558076376494</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1558076376494</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added Polymorphic Shape Data for all shapes bar Polygon.">
+      <created>1558362598003</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1558362598003</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Added mouseClick events, throws a bunch of errors but its halfway to drawing shapes">
+      <created>1558534126487</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1558534126487</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.105325915" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32969603" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.114575215" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3998441" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32969603" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32969603" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Maven" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+    </layout>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Built GUI to basic specifications" />
+    <MESSAGE value="Hotfixed leftover files" />
+    <MESSAGE value="Added Polymorphic Shape Data for all shapes bar Polygon." />
+    <MESSAGE value="Added mouseClick events, throws a bunch of errors but its halfway to drawing shapes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added mouseClick events, throws a bunch of errors but its halfway to drawing shapes" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/guiExploration/FramesAndPanels.java" />
+    <entry file="file://$PROJECT_DIR$/src/guiExploration/Load.java" />
+    <entry file="file://$USER_HOME$/IdeaProjects/untitled/src/guiExploration/PanelsAndWidgets.java" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa8724.1101/Wiring.java" />
+    <entry file="file://$PROJECT_DIR$/src/guiExploration/App.form" />
+    <entry file="file://$PROJECT_DIR$/src/guiExploration/FileChoose.java" />
+    <entry file="file://$PROJECT_DIR$/src/guiExploration/FileOpener.java" />
+    <entry file="file://$PROJECT_DIR$/src/guiExploration/App.java" />
+    <entry file="file://$PROJECT_DIR$/src/guiExploration/GUI.java" />
+    <entry file="file://$PROJECT_DIR$/src/PaintPanel.java" />
+    <entry file="file://$PROJECT_DIR$/src/bin.java" />
+    <entry file="file://$PROJECT_DIR$/src/Side.java" />
+    <entry file="file://$PROJECT_DIR$/src/GUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1088">
+          <caret line="66" column="11" selection-start-line="66" selection-start-column="11" selection-end-line="66" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FileChoose.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Plot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Line.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Oval.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shapes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Rectangle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="25" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
