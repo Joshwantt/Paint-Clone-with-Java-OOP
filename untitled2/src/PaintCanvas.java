@@ -81,7 +81,7 @@ public class PaintCanvas extends JPanel {
         if (this.entries.isEmpty() == false) {
             for (int i = 0; i < this.entries.size(); ++i) {
                 if ((this.entries.get(i)).type == 0) {// if entry i is PLOT type
-                    g.fillRect(decodeX(entries.get(i).x[0]-2), decodeY(entries.get(i).y[0]-2),3,3);// Draw Filled Square 3*3 pixels wide centered on mouse pointer
+                    g.fillRect(decodeX(entries.get(i).x[0])-2, decodeY(entries.get(i).y[0])-2,4,4);// Draw Filled Square 3*3 pixels wide centered on mouse pointer
                 }
                 else if ((this.entries.get(i)).type == 1) {// if entry i is LINE type
                     g.drawLine(decodeX(entries.get(i).x[0]), decodeY(entries.get(i).y[0]), decodeX(entries.get(i).x[1]), decodeY(entries.get(i).y[1]));
