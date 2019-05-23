@@ -2,8 +2,8 @@ import java.awt.*;
 
 public class Shapes {
     int type;
-    int[] x = new int[3];
-    int[] y = new int[3];
+    double[] x = new double[3];
+    double[] y = new double[3];
     boolean fill;
 
     Color colour;

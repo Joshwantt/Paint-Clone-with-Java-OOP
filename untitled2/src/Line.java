@@ -1,7 +1,7 @@
 import java.awt.*;
 
 public class Line extends Shapes {
-    public Line(int x1, int y1, int x2, int y2, Color c) {
+    public Line(double x1, double y1, double x2, double y2, Color c) {
         super.type = 1;
         super.colour = c;
         super.x[0] = x1;

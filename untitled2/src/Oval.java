@@ -1,7 +1,7 @@
 import java.awt.*;
 
 public class Oval extends Shapes {
-    public Oval(int x1, int y1, int x2, int y2, Color c, boolean f)
+    public Oval(double x1, double y1, double x2, double y2, Color c, boolean f)
     {
         super.type = 3;
         super.colour = c;

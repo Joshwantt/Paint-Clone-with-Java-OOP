@@ -1,7 +1,7 @@
 import java.awt.*;
 
 public class Rectangle extends Shapes {
-    public Rectangle(int x1, int y1, int x2, int y2, Color c, boolean f)
+    public Rectangle(double x1, double y1, double x2, double y2, Color c, boolean f)
     {
         super.type = 2;
         super.colour = c;

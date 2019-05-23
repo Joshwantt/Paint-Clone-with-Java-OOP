@@ -50,28 +50,54 @@ public class PaintCanvas extends JPanel {
         btnPlot.setBackground(Color.CYAN);
     }
 
+    public double encodeX(int width) { //encode pixel location to percentage of total screen width
+        int pixels = pnlCanvas.getWidth();
+        double decimal = width/pixels;
+        return decimal;
+    }
+
+    public double encodeY(int height) {
+        int pixels = pnlCanvas.getHeight();
+        double decimal = height/pixels;
+        return decimal;
+    }
+
+    public int decodeX(double width) {
+        int pixels = pnlCanvas.getWidth();
+        int location = (int)Math.round(width*pixels);
+        return location;
+    }
+
+    public int decodeY(double height) {
+        int pixels = pnlCanvas.getHeight();
+        int location = (int)Math.round(height*pixels);
+        return location;
+    }
+
+
+
     public void paintComponent(Graphics g) {
         g.clearRect(0, 0, this.getWidth(), this.getHeight());
         if (this.entries.isEmpty() == false) {
             for (int i = 0; i < this.entries.size(); ++i) {
                 if ((this.entries.get(i)).type == 0) {// if entry i is PLOT type
-                    g.fillRect(entries.get(i).x[0]-2,entries.get(i).y[0]-2,3,3 );// Draw Filled Square 3*3 pixels wide centered on mouse pointer
+                    g.fillRect(decodeX(entries.get(i).x[0]-2), decodeY(entries.get(i).y[0]-2),3,3);// Draw Filled Square 3*3 pixels wide centered on mouse pointer
                 }
                 else if ((this.entries.get(i)).type == 1) {// if entry i is LINE type
-                    g.drawLine(entries.get(i).x[0], entries.get(i).y[0], entries.get(i).x[1], entries.get(i).y[1]);
+                    g.drawLine(decodeX(entries.get(i).x[0]), decodeY(entries.get(i).y[0]), decodeX(entries.get(i).x[1]), decodeY(entries.get(i).y[1]));
                 }
                 else if ((this.entries.get(i)).type == 2) {
                     if (entries.get(i).fill) {
-                        g.fillRect(entries.get(i).x[0], entries.get(i).y[0], entries.get(i).x[1] - entries.get(i).x[0], entries.get(i).y[1] - entries.get(i).y[0]);
+                        g.fillRect(decodeX(entries.get(i).x[0]), decodeY(entries.get(i).y[0]), decodeX(entries.get(i).x[1] - entries.get(i).x[0]), decodeY(entries.get(i).y[1] - entries.get(i).y[0]));
                     } else {
-                        g.drawRect(entries.get(i).x[0], entries.get(i).y[0], entries.get(i).x[1] - entries.get(i).x[0], entries.get(i).y[1] - entries.get(i).y[0]);
+                        g.drawRect(decodeX(entries.get(i).x[0]), decodeY(entries.get(i).y[0]), decodeX(entries.get(i).x[1] - entries.get(i).x[0]), decodeY(entries.get(i).y[1] - entries.get(i).y[0]));
                     }
                 }
                 else if ((this.entries.get(i)).type == 3) {
                     if (entries.get(i).fill) {
-                        g.fillOval(entries.get(i).x[0], entries.get(i).y[0], (entries.get(i).x[1] - entries.get(i).x[0]), entries.get(i).y[1] - entries.get(i).y[0]);
+                        g.fillOval(decodeX(entries.get(i).x[0]), decodeY(entries.get(i).y[0]), decodeX(entries.get(i).x[1] - entries.get(i).x[0]), decodeY(entries.get(i).y[1] - entries.get(i).y[0]));
                     } else {
-                        g.drawOval(entries.get(i).x[0], entries.get(i).y[0], (entries.get(i).x[1] - entries.get(i).x[0]), entries.get(i).y[1] - entries.get(i).y[0]);
+                        g.drawOval(decodeX(entries.get(i).x[0]), decodeY(entries.get(i).y[0]), decodeX(entries.get(i).x[1] - entries.get(i).x[0]), decodeY(entries.get(i).y[1] - entries.get(i).y[0]));
                     }
                 }
             }
@@ -119,26 +145,26 @@ public class PaintCanvas extends JPanel {
                 case 0:
                     x2 = me.getX();
                     y2 = me.getY();
-                    entries.add(new Plot(x2, y2, colour));
+                    entries.add(new Plot(encodeX(x2), encodeY(y2), colour));
                     System.out.println(entries.size());
                     repaint();
                     break;
                 case 1:
                     x2 = me.getX();
                     y2 = me.getY();
-                    entries.add(new Line(x1, y1, x2, y2, colour));
+                    entries.add(new Line(encodeX(x1), encodeY(y1), encodeX(x2), encodeY(y2), colour));
                     repaint();
                     break;
                 case 2:
                     x2 = me.getX();
                     y2 = me.getY();
-                    entries.add(new Rectangle(x1, y1, x2, y2, colour, fill));
+                    entries.add(new Rectangle(encodeX(x1), encodeY(y1), encodeX(x2), encodeY(y2), colour, fill));
                     repaint();
                     break;
                 case 3:
                     x2 = me.getX();
                     y2 = me.getY();
-                    entries.add(new Oval(x1, y1, x2, y2, colour, fill));
+                    entries.add(new Oval(encodeX(x1), encodeY(y1), encodeX(x2), encodeY(y2), colour, fill));
                     repaint();
                     break;
 
