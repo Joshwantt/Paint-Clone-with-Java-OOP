@@ -18,6 +18,7 @@ public class PaintCanvas extends JPanel {
     int x1, x2, y1, y2;
     private Color colour = new Color(0, 0, 0);
     private int shape = 0;
+    private int Colorfill = 0;
     private boolean fill;
 
     private JPanel pnlBtns = new JPanel();
@@ -35,6 +36,7 @@ public class PaintCanvas extends JPanel {
         this.btnRect.addActionListener(acts);
         this.btnOval.addActionListener(acts);
         this.btnFill.addActionListener(acts);
+        this.btnCol.addActionListener(acts);
         this.pnlBtns.add(this.btnPlot);
         this.pnlBtns.add(this.btnLine);
         this.pnlBtns.add(this.btnRect);
@@ -78,8 +80,12 @@ public class PaintCanvas extends JPanel {
 
     public void paintComponent(Graphics g) {
         g.clearRect(0, 0, this.getWidth(), this.getHeight());
-        if (this.entries.isEmpty() == false) {
+        if (!this.entries.isEmpty()) {
             for (int i = 0; i < this.entries.size(); ++i) {
+                if ((this.entries.get(i)).colourFill != g.getColor()) {
+                    g.setColor((this.entries.get(i)).colourFill);
+                }
+
                 if ((this.entries.get(i)).type == 0) {// if entry i is PLOT type
                     g.fillRect(decodeX(entries.get(i).x[0])-2, decodeY(entries.get(i).y[0])-2,4,4);// Draw Filled Square 3*3 pixels wide centered on mouse pointer
                 }
@@ -89,6 +95,12 @@ public class PaintCanvas extends JPanel {
                 else if ((this.entries.get(i)).type == 2) {
                     if (entries.get(i).fill) {
                         g.fillRect(decodeX(entries.get(i).x[0]), decodeY(entries.get(i).y[0]), decodeX(entries.get(i).x[1] - entries.get(i).x[0]), decodeY(entries.get(i).y[1] - entries.get(i).y[0]));
+                        if (this.entries.get(i).colourFill != this.entries.get(i).colourLine) {
+                            Color save = g.getColor();
+                            g.setColor(this.entries.get(i).colourLine);
+                            g.drawRect(decodeX(entries.get(i).x[0]), decodeY(entries.get(i).y[0]), decodeX(entries.get(i).x[1] - entries.get(i).x[0]), decodeY(entries.get(i).y[1] - entries.get(i).y[0]));
+                            g.setColor(save);
+                        }
                     } else {
                         g.drawRect(decodeX(entries.get(i).x[0]), decodeY(entries.get(i).y[0]), decodeX(entries.get(i).x[1] - entries.get(i).x[0]), decodeY(entries.get(i).y[1] - entries.get(i).y[0]));
                     }
@@ -145,26 +157,26 @@ public class PaintCanvas extends JPanel {
                 case 0:
                     x2 = me.getX();
                     y2 = me.getY();
-                    entries.add(new Plot(encodeX(x2), encodeY(y2), colour));
+                    entries.add(new Plot(encodeX(x2), encodeY(y2)));
                     System.out.println(entries.size());
                     repaint();
                     break;
                 case 1:
                     x2 = me.getX();
                     y2 = me.getY();
-                    entries.add(new Line(encodeX(x1), encodeY(y1), encodeX(x2), encodeY(y2), colour));
+                    entries.add(new Line(encodeX(x1), encodeY(y1), encodeX(x2), encodeY(y2)));
                     repaint();
                     break;
                 case 2:
                     x2 = me.getX();
                     y2 = me.getY();
-                    entries.add(new Rectangle(encodeX(x1), encodeY(y1), encodeX(x2), encodeY(y2), colour, fill));
+                    entries.add(new Rectangle(encodeX(x1), encodeY(y1), encodeX(x2), encodeY(y2),fill));
                     repaint();
                     break;
                 case 3:
                     x2 = me.getX();
                     y2 = me.getY();
-                    entries.add(new Oval(encodeX(x1), encodeY(y1), encodeX(x2), encodeY(y2), colour, fill));
+                    entries.add(new Oval(encodeX(x1), encodeY(y1), encodeX(x2), encodeY(y2),fill));
                     repaint();
                     break;
 
@@ -209,6 +221,15 @@ public class PaintCanvas extends JPanel {
                 shape = 3;
                 nullBtns();
                 btnOval.setBackground(Color.CYAN);
+            }
+            if (a.getSource() == btnCol && Colorfill != 1) {
+                entries.add(new ColorFill(Color.BLUE));
+                entries.add(new ColorLine(Color.BLACK));
+                Colorfill = 1;
+            } else {
+                entries.add(new ColorFill(Color.BLACK));
+                entries.add(new ColorLine(Color.BLUE));
+                Colorfill = 0;
             }
         }
     }

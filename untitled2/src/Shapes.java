@@ -6,7 +6,8 @@ public class Shapes {
     double[] y = new double[3];
     boolean fill;
 
-    Color colour;
+    Color colourFill;
+    Color colourLine;
 
     public Shapes() {
     }
