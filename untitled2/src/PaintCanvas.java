@@ -3,7 +3,6 @@ import javax.swing.*;
 import java.awt.event.*;
 import java.util.ArrayList;
 import javax.swing.JButton;
-import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 import static javax.swing.UIManager.get;
@@ -18,7 +17,8 @@ public class PaintCanvas extends JPanel {
     int x1, x2, y1, y2;
     private Color colour = new Color(0, 0, 0);
     private int shape = 0;
-    private int Colorfill = 0;
+    private Color colourLine = Color.BLACK;
+    private Color colourFill = Color.WHITE;
     private boolean fill;
 
     private JPanel pnlBtns = new JPanel();
@@ -28,6 +28,7 @@ public class PaintCanvas extends JPanel {
     private JButton btnRect = new JButton("RECTANGLE");
     private JButton btnOval = new JButton("OVAL");
     private JButton btnCol = new JButton("  ");
+    private JButton btnColF = new JButton("  ");
     private JCheckBox btnFill = new JCheckBox("Fill");
 
     public PaintCanvas() {
@@ -37,13 +38,16 @@ public class PaintCanvas extends JPanel {
         this.btnOval.addActionListener(acts);
         this.btnFill.addActionListener(acts);
         this.btnCol.addActionListener(acts);
+        this.btnColF.addActionListener(acts);
         this.pnlBtns.add(this.btnPlot);
         this.pnlBtns.add(this.btnLine);
         this.pnlBtns.add(this.btnRect);
         this.pnlBtns.add(this.btnOval);
         this.pnlBtns.add(this.btnCol);
+        this.pnlBtns.add(this.btnColF);
         this.pnlBtns.add(this.btnFill);
-        this.btnCol.setBackground(this.colour);
+        this.btnCol.setBackground(Color.BLACK);
+        this.btnColF.setBackground(Color.WHITE);
 
         this.add(this.pnlBtns, "North");
         this.add(this.pnlCanvas, "Center");
@@ -82,31 +86,43 @@ public class PaintCanvas extends JPanel {
         g.clearRect(0, 0, this.getWidth(), this.getHeight());
         if (!this.entries.isEmpty()) {
             for (int i = 0; i < this.entries.size(); ++i) {
-                if ((this.entries.get(i)).colourFill != g.getColor()) {
-                    g.setColor((this.entries.get(i)).colourFill);
+                g.setColor((this.entries.get(i)).colourLine);
+                if ((this.entries.get(i)).colourLine != g.getColor()) {
+                    g.setColor((this.entries.get(i)).colourLine);
                 }
 
                 if ((this.entries.get(i)).type == 0) {// if entry i is PLOT type
+                    g.setColor((this.entries.get(i)).colourLine);
                     g.fillRect(decodeX(entries.get(i).x[0])-2, decodeY(entries.get(i).y[0])-2,4,4);// Draw Filled Square 3*3 pixels wide centered on mouse pointer
                 }
                 else if ((this.entries.get(i)).type == 1) {// if entry i is LINE type
+                    g.setColor((this.entries.get(i)).colourLine);
                     g.drawLine(decodeX(entries.get(i).x[0]), decodeY(entries.get(i).y[0]), decodeX(entries.get(i).x[1]), decodeY(entries.get(i).y[1]));
                 }
                 else if ((this.entries.get(i)).type == 2) {
-                    if (entries.get(i).fill) {
-                        g.fillRect(decodeX(entries.get(i).x[0]), decodeY(entries.get(i).y[0]), decodeX(entries.get(i).x[1] - entries.get(i).x[0]), decodeY(entries.get(i).y[1] - entries.get(i).y[0]));
-                        if (this.entries.get(i).colourFill != this.entries.get(i).colourLine) {
-                            Color save = g.getColor();
-                            g.setColor(this.entries.get(i).colourLine);
-                            g.drawRect(decodeX(entries.get(i).x[0]), decodeY(entries.get(i).y[0]), decodeX(entries.get(i).x[1] - entries.get(i).x[0]), decodeY(entries.get(i).y[1] - entries.get(i).y[0]));
-                            g.setColor(save);
-                        }
+                    if (!entries.get(i).fill) {
+                        g.setColor((this.entries.get(i)).colourLine);
+                        g.drawRect(decodeX(entries.get(i).x[0] + 1), decodeY(entries.get(i).y[0] + 1), decodeX(entries.get(i).x[1] - entries.get(i).x[0]) - 2, decodeY(entries.get(i).y[1] - entries.get(i).y[0]) - 2);
                     } else {
+                        g.setColor(this.entries.get(i).colourLine);
                         g.drawRect(decodeX(entries.get(i).x[0]), decodeY(entries.get(i).y[0]), decodeX(entries.get(i).x[1] - entries.get(i).x[0]), decodeY(entries.get(i).y[1] - entries.get(i).y[0]));
+                        g.setColor(this.entries.get(i).colourFill);
+                        if (((entries.get(i).x[1] - entries.get(i).x[0]) > 0) && (entries.get(i).y[1] - entries.get(i).y[0]) > 0) { // Positive X and Y coords
+                            g.fillRect(decodeX(entries.get(i).x[0]) + 1, decodeY(entries.get(i).y[0]) + 1, (decodeX(entries.get(i).x[1] - entries.get(i).x[0])) - 1, decodeY(entries.get(i).y[1] - entries.get(i).y[0]) - 1);
+                        } else if (((entries.get(i).x[1] - entries.get(i).x[0]) < 0) && (entries.get(i).y[1] - entries.get(i).y[0]) > 0) { // Negative X Positive Y
+                            g.fillRect(decodeX(entries.get(i).x[0]) -1, decodeY(entries.get(i).y[0]) + 1, (decodeX(entries.get(i).x[1] - entries.get(i).x[0])) +3, decodeY(entries.get(i).y[1] - entries.get(i).y[0]) -1);
+                        } else if (((entries.get(i).x[1] - entries.get(i).x[0]) < 0) && (entries.get(i).y[1] - entries.get(i).y[0]) < 0) { // Negative X and Y
+                            g.fillRect(decodeX(entries.get(i).x[0]) - 1, decodeY(entries.get(i).y[0]) - 1, (decodeX(entries.get(i).x[1] - entries.get(i).x[0])) +3, decodeY(entries.get(i).y[1] - entries.get(i).y[0]) +3 );
+                        }
+                        else if (((entries.get(i).x[1] - entries.get(i).x[0]) > 0) && (entries.get(i).y[1] - entries.get(i).y[0]) < 0) {// Positive X Negative Y
+                            g.fillRect(decodeX(entries.get(i).x[0]) + 1, decodeY(entries.get(i).y[0]) - 1, (decodeX(entries.get(i).x[1] - entries.get(i).x[0])) -1, decodeY(entries.get(i).y[1] - entries.get(i).y[0]) +3);
+                        }
+
                     }
                 }
                 else if ((this.entries.get(i)).type == 3) {
                     if (entries.get(i).fill) {
+                        g.setColor((this.entries.get(i)).colourLine);
                         g.fillOval(decodeX(entries.get(i).x[0]), decodeY(entries.get(i).y[0]), decodeX(entries.get(i).x[1] - entries.get(i).x[0]), decodeY(entries.get(i).y[1] - entries.get(i).y[0]));
                     } else {
                         g.drawOval(decodeX(entries.get(i).x[0]), decodeY(entries.get(i).y[0]), decodeX(entries.get(i).x[1] - entries.get(i).x[0]), decodeY(entries.get(i).y[1] - entries.get(i).y[0]));
@@ -170,13 +186,13 @@ public class PaintCanvas extends JPanel {
                 case 2:
                     x2 = me.getX();
                     y2 = me.getY();
-                    entries.add(new Rectangle(encodeX(x1), encodeY(y1), encodeX(x2), encodeY(y2),fill));
+                    entries.add(new Rectangle(encodeX(x1), encodeY(y1), encodeX(x2), encodeY(y2),fill, colourFill,colourLine));
                     repaint();
                     break;
                 case 3:
                     x2 = me.getX();
                     y2 = me.getY();
-                    entries.add(new Oval(encodeX(x1), encodeY(y1), encodeX(x2), encodeY(y2),fill));
+                    entries.add(new Oval(encodeX(x1), encodeY(y1), encodeX(x2), encodeY(y2),fill, colourFill,colourLine));
                     repaint();
                     break;
 
@@ -222,15 +238,22 @@ public class PaintCanvas extends JPanel {
                 nullBtns();
                 btnOval.setBackground(Color.CYAN);
             }
-            if (a.getSource() == btnCol && Colorfill != 1) {
-                entries.add(new ColorFill(Color.BLUE));
-                entries.add(new ColorLine(Color.BLACK));
-                Colorfill = 1;
-            } else {
+            if (a.getSource() == btnCol) {
+                Color c = JColorChooser.showDialog(null,"Primary Colour",Color.BLACK,false);
+                btnCol.setBackground(c);
+                entries.add(new ColorFill(c));
+                colourLine = c;
+            }
+            if (a.getSource() == btnColF) {
+                Color c2 = JColorChooser.showDialog(null,"Secondary Colour",Color.WHITE,false);
+                btnColF.setBackground(c2);
+                entries.add(new ColorFill(c2));
+                colourFill = c2;
+            }/*else {
                 entries.add(new ColorFill(Color.BLACK));
                 entries.add(new ColorLine(Color.BLUE));
-                Colorfill = 0;
-            }
+                colourFill = 0;
+            }*/
         }
     }
 }
