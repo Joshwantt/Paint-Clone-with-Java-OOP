@@ -1,9 +1,12 @@
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
+import java.io.IOException;
 import java.util.ArrayList;
 import javax.swing.JButton;
 import javax.swing.JPanel;
+import java.io.PrintWriter;
+
 
 import static javax.swing.UIManager.get;
 
@@ -30,6 +33,7 @@ public class PaintCanvas extends JPanel {
     private JButton btnCol = new JButton("  ");
     private JButton btnColF = new JButton("  ");
     private JCheckBox btnFill = new JCheckBox("Fill");
+    private JButton btnSave = new JButton("SAVE");
 
     public PaintCanvas() {
         this.btnPlot.addActionListener(acts);
@@ -39,6 +43,7 @@ public class PaintCanvas extends JPanel {
         this.btnFill.addActionListener(acts);
         this.btnCol.addActionListener(acts);
         this.btnColF.addActionListener(acts);
+        this.btnSave.addActionListener(acts);
         this.pnlBtns.add(this.btnPlot);
         this.pnlBtns.add(this.btnLine);
         this.pnlBtns.add(this.btnRect);
@@ -46,6 +51,7 @@ public class PaintCanvas extends JPanel {
         this.pnlBtns.add(this.btnCol);
         this.pnlBtns.add(this.btnColF);
         this.pnlBtns.add(this.btnFill);
+        this.pnlBtns.add(this.btnSave);
         this.btnCol.setBackground(Color.BLACK);
         this.btnColF.setBackground(Color.WHITE);
 
@@ -56,26 +62,30 @@ public class PaintCanvas extends JPanel {
         btnPlot.setBackground(Color.CYAN);
     }
 
-    public double encodeX(int width) { //encode pixel location to percentage of total screen width
-        int pixels = pnlCanvas.getWidth();
-        double decimal = width/pixels;
+    public float encodeX(int width) { //encode pixel location to percentage of total screen width
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        float pixels = (float)Math.round(screenSize.height * 0.85);
+        float decimal = (width/pixels);
         return decimal;
     }
 
-    public double encodeY(int height) {
-        int pixels = pnlCanvas.getHeight();
-        double decimal = height/pixels;
+    public float encodeY(int height) {
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        float pixels = (float)Math.round(screenSize.height * 0.85);
+        float decimal = (height/pixels);
         return decimal;
     }
 
-    public int decodeX(double width) {
-        int pixels = pnlCanvas.getWidth();
+    public int decodeX(float width) {
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        float pixels = (float)Math.round(screenSize.height * 0.85);
         int location = (int)Math.round(width*pixels);
         return location;
     }
 
-    public int decodeY(double height) {
-        int pixels = pnlCanvas.getHeight();
+    public int decodeY(float height) {
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        float pixels = (float)Math.round(screenSize.height * 0.85);
         int location = (int)Math.round(height*pixels);
         return location;
     }
@@ -249,11 +259,52 @@ public class PaintCanvas extends JPanel {
                 btnColF.setBackground(c2);
                 entries.add(new ColorFill(c2));
                 colourFill = c2;
-            }/*else {
-                entries.add(new ColorFill(Color.BLACK));
-                entries.add(new ColorLine(Color.BLUE));
-                colourFill = 0;
-            }*/
+            }
+
+            if (a.getSource() == btnSave) { //save code
+                try (PrintWriter out = new PrintWriter("save.vec")) {
+                    if (!entries.isEmpty()) {
+                        for (int i = 0; i < entries.size(); ++i) {
+
+                                /*
+                                if (entries.get(i).colourLine != entries.get(i-1).colourLine && (i>0)) {
+                                    Color c = entries.get(i).colourLine;
+                                    String line = String.format("PEN #%02X%02X%02X", c.getRed(), c.getGreen(), c.getBlue());
+                                    out.println(line);
+                                }
+
+                                if (entries.get(i).colourFill != entries.get(i-1).colourFill) {
+                                    Color c = entries.get(i).colourFill;
+                                    String line = String.format("FILL #%02X%02X%02X", c.getRed(), c.getGreen(), c.getBlue());
+                                    out.println(line);
+                                }
+                                */
+
+                            if (entries.get(i).type == 0) {
+                                String line = String.format("PLOT %6f %6f",entries.get(i).x[0],entries.get(i).y[0]);
+                                out.println(line);
+                            }
+                            if (entries.get(i).type == 1) {
+                                String line = String.format("LINE %6f %6f %6f %6f",entries.get(i).x[0],entries.get(i).y[0],entries.get(i).x[1],entries.get(i).y[1]);
+                                out.println(line);
+                            }
+                            if (entries.get(i).type == 2) {
+                                String line = String.format("RECTANGLE %6f %6f %6f %6f",entries.get(i).x[0],entries.get(i).y[0],entries.get(i).x[1],entries.get(i).y[1]);
+                                out.println(line);
+                            }
+                            if (entries.get(i).type == 3) {
+                                String line = String.format("ELLIPSE %6f %6f %6f %6f",entries.get(i).x[0],entries.get(i).y[0],entries.get(i).x[1],entries.get(i).y[1]);
+                                out.println(line);
+                            }
+
+                        }
+                    }
+
+                }
+                catch (IOException ex) {
+                    //somethings gone wrong with save
+                }
+            }
         }
     }
 }
