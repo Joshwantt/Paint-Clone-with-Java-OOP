@@ -10,31 +10,56 @@ import java.io.PrintWriter;
 
 import static javax.swing.UIManager.get;
 
-
+/**
+ * The PaintCanvas class gathers mouse click coordinates,
+ * colours and shape data in order to display a series
+ * of real-time 2D graphical effects.
+ * <p>
+ * Can be broken down into three sections.
+ * </p>
+ * <p>
+ * <b> One:</b> Detects mouse clicks and button presses
+ * to determine shape size and type.
+ * </p>
+ * <p>
+ * <b>Two:</b> Saves most recent shape to an ArrayList
+ * in a pre-determined format
+ * </p>
+ * <p>
+ * <b>Three:</b> Shapes in the ArrayList are read and
+ * drawn in real-time by the 2D graphics library.
+ * </p>
+ *
+ */
 public class PaintCanvas extends JPanel {
-    private ArrayList<Shapes> entries = new ArrayList();
-    private mouseHandler mouse = new mouseHandler();
-    private actionHandler acts = new actionHandler();
+    private ArrayList<Shapes> entries = new ArrayList(); //The main array for storing entries of shapes, complete with coordinates and colours
+    private mouseHandler mouse = new mouseHandler(); // Construction of mouseHandler
+    private actionHandler acts = new actionHandler(); // Construction of actionHandler
 
     private static final Color BG = Color.WHITE;
-    int x1, x2, y1, y2;
+    int x1, x2, y1, y2; //x1,y1 represent the x,y coordinates gathered when clicking the mouse IN, x2,y2 represent the mouse being released.
     private Color colour = new Color(0, 0, 0);
-    private int shape = 0;
-    private Color colourLine = Color.BLACK;
-    private Color colourFill = Color.WHITE;
-    private boolean fill;
+    private int shape = 0; //The shape selected in accordance with the pen tool selected
+    private Color colourLine = Color.BLACK; // The colour of shape outlines
+    private Color colourFill = Color.WHITE; // The colour of shape fills
+    private boolean fill; //Whether or not a shape has a fill
 
-    private JPanel pnlBtns = new JPanel();
-    private JPanel pnlCanvas = new JPanel();
-    private JButton btnPlot = new JButton("PLOT");
-    private JButton btnLine = new JButton("LINE");
-    private JButton btnRect = new JButton("RECTANGLE");
-    private JButton btnOval = new JButton("OVAL");
-    private JButton btnCol = new JButton("  ");
-    private JButton btnColF = new JButton("  ");
-    private JCheckBox btnFill = new JCheckBox("Fill");
-    private JButton btnSave = new JButton("SAVE");
+    private JPanel pnlBtns = new JPanel(); //The top panel full of buttons
+    private JPanel pnlCanvas = new JPanel(); //The main painting canvas where graphics are drawn
+    private JButton btnPlot = new JButton("PLOT"); //Plot
+    private JButton btnLine = new JButton("LINE"); //Line
+    private JButton btnRect = new JButton("RECTANGLE"); //Rectangle
+    private JButton btnOval = new JButton("OVAL"); //Oval
+    private JButton btnCol = new JButton("  "); //Colour
+    private JButton btnColF = new JButton("  "); //Fill Colour
+    private JCheckBox btnFill = new JCheckBox("Fill"); //Choose whether or not shape gets Fill Colour
+    private JButton btnSave = new JButton("SAVE"); //Save
 
+    /**
+     * Builds and formats the requisite components.
+     * These components consist of buttons and
+     * listeners.
+     */
     public PaintCanvas() {
         this.btnPlot.addActionListener(acts);
         this.btnLine.addActionListener(acts);
@@ -52,71 +77,107 @@ public class PaintCanvas extends JPanel {
         this.pnlBtns.add(this.btnColF);
         this.pnlBtns.add(this.btnFill);
         this.pnlBtns.add(this.btnSave);
-        this.btnCol.setBackground(Color.BLACK);
+        this.btnCol.setBackground(Color.BLACK); //Set default colours for Fill and Line colours.
         this.btnColF.setBackground(Color.WHITE);
 
         this.add(this.pnlBtns, "North");
         this.add(this.pnlCanvas, "Center");
         this.addMouseListener(this.mouse);
-        nullBtns();
-        btnPlot.setBackground(Color.CYAN);
+        nullBtns(); //set background colour of all buttons (excepting Col and ColF) to null.
+        btnPlot.setBackground(Color.CYAN); //Set background of Plot to Cyan as it is selected by default.
     }
 
+    /**
+     * Converts integer X coordinates into float values.
+     *
+     * @param width the width of the screen in int format.
+     * @return
+     */
     public float encodeX(int width) { //encode pixel location to percentage of total screen width
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         float pixels = (float)Math.round(screenSize.height * 0.85);
         float decimal = (width/pixels);
-        return decimal;
+        return decimal; //Return a percentage of the screen width
     }
 
+    /**
+     * Converts integer Y coordinates into float values.
+     *
+     * @param height the height of the screen in int format.
+     * @return
+     */
     public float encodeY(int height) {
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         float pixels = (float)Math.round(screenSize.height * 0.85);
         float decimal = (height/pixels);
-        return decimal;
+        return decimal;//Return a percentage of the screen height
     }
 
+    /**
+     * Converts the encoded float values into integer coordinates.
+     *
+     * @param width the width of the screen in float format.
+     * @return
+     */
     public int decodeX(float width) {
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         float pixels = (float)Math.round(screenSize.height * 0.85);
         int location = (int)Math.round(width*pixels);
-        return location;
+        return location;//Convert Screen width percentage into pixel integer
     }
-
+    /**
+     * Converts the encoded float values into integer coordinates.
+     *
+     * @param height the height of the screen in float format.
+     * @return
+     */
     public int decodeY(float height) {
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         float pixels = (float)Math.round(screenSize.height * 0.85);
         int location = (int)Math.round(height*pixels);
-        return location;
+        return location;//Convert Screen height percentage into pixel integer
     }
 
-
-
+    /**
+     * Overrides the paintComponent in JComponent to draw shapes from an array.
+     * <p>
+     * Determines what tool is in use via the 'shape' int.
+     * Depending on the selected tool, Overrides paintComponent
+     * with shape-appropriate instructions.
+     * Runs through the ArrayList to draw or fill every listed shape.
+     *
+     * @param g Graphics component
+     */
+    @Override
     public void paintComponent(Graphics g) {
-        g.clearRect(0, 0, this.getWidth(), this.getHeight());
-        if (!this.entries.isEmpty()) {
-            for (int i = 0; i < this.entries.size(); ++i) {
-                g.setColor((this.entries.get(i)).colourLine);
-                if ((this.entries.get(i)).colourLine != g.getColor()) {
-                    g.setColor((this.entries.get(i)).colourLine);
-                }
+        g.clearRect(0, 0, getWidth(), getHeight()); //upon initialisation, clear all graphics from the screen
 
-                if ((this.entries.get(i)).type == 0) {// if entry i is PLOT type
-                    g.setColor((this.entries.get(i)).colourLine);
-                    g.fillRect(decodeX(entries.get(i).x[0])-2, decodeY(entries.get(i).y[0])-2,4,4);// Draw Filled Square 3*3 pixels wide centered on mouse pointer
+        if (!entries.isEmpty()) {
+            for (int i = 0; i < entries.size(); ++i) {// for loop runs through every shape in entries and draws them to the canvas
+                g.setColor((entries.get(i)).colourLine);// Set the pen colour to the current shape's colour
+                /*if ((entries.get(i)).colourLine != g.getColor()) {
+                    g.setColor((entries.get(i)).colourLine);
+                }*/
+
+                if ((entries.get(i)).type == 0) {// if entry i is of PLOT type
+                    g.setColor((entries.get(i)).colourLine);//set colour according to the current entry being read
+                    g.fillRect(decodeX(entries.get(i).x[0])-5, decodeY(entries.get(i).y[0])-5,10,10);// Draw Filled Square 10*10 pixels wide centered on mouse pointer
                 }
-                else if ((this.entries.get(i)).type == 1) {// if entry i is LINE type
-                    g.setColor((this.entries.get(i)).colourLine);
-                    g.drawLine(decodeX(entries.get(i).x[0]), decodeY(entries.get(i).y[0]), decodeX(entries.get(i).x[1]), decodeY(entries.get(i).y[1]));
+                else if ((entries.get(i)).type == 1) {// if entry i is of LINE type
+                    g.setColor((entries.get(i)).colourLine);
+                    g.drawLine(decodeX(entries.get(i).x[0]), decodeY(entries.get(i).y[0]), decodeX(entries.get(i).x[1]), decodeY(entries.get(i).y[1]));// Draw line starting where mouse was clicked in, ending where it was released
                 }
-                else if ((this.entries.get(i)).type == 2) {
-                    if (!entries.get(i).fill) {
-                        g.setColor((this.entries.get(i)).colourLine);
-                        g.drawRect(decodeX(entries.get(i).x[0] + 1), decodeY(entries.get(i).y[0] + 1), decodeX(entries.get(i).x[1] - entries.get(i).x[0]) - 2, decodeY(entries.get(i).y[1] - entries.get(i).y[0]) - 2);
-                    } else {
-                        g.setColor(this.entries.get(i).colourLine);
+                else if ((entries.get(i)).type == 2) {// if entry i is of Square type
+                    if (!entries.get(i).fill) {// if "no fill" was selected
+                        g.setColor((entries.get(i)).colourLine);
                         g.drawRect(decodeX(entries.get(i).x[0]), decodeY(entries.get(i).y[0]), decodeX(entries.get(i).x[1] - entries.get(i).x[0]), decodeY(entries.get(i).y[1] - entries.get(i).y[0]));
-                        g.setColor(this.entries.get(i).colourFill);
+                    }
+                    else if (entries.get(i).fill){
+                        g.setColor(entries.get(i).colourLine);
+                        g.drawRect(decodeX(entries.get(i).x[0]), decodeY(entries.get(i).y[0]), decodeX(entries.get(i).x[1] - entries.get(i).x[0]), decodeY(entries.get(i).y[1] - entries.get(i).y[0]));
+                        g.setColor(entries.get(i).colourFill);
+
+                        //The following if statements are for formatting the filler rectangle based on positive and negative x,y coords
                         if (((entries.get(i).x[1] - entries.get(i).x[0]) > 0) && (entries.get(i).y[1] - entries.get(i).y[0]) > 0) { // Positive X and Y coords
                             g.fillRect(decodeX(entries.get(i).x[0]) + 1, decodeY(entries.get(i).y[0]) + 1, (decodeX(entries.get(i).x[1] - entries.get(i).x[0])) - 1, decodeY(entries.get(i).y[1] - entries.get(i).y[0]) - 1);
                         } else if (((entries.get(i).x[1] - entries.get(i).x[0]) < 0) && (entries.get(i).y[1] - entries.get(i).y[0]) > 0) { // Negative X Positive Y
@@ -131,26 +192,25 @@ public class PaintCanvas extends JPanel {
                     }
                 }
                 else if ((this.entries.get(i)).type == 3) {
-                    if (entries.get(i).fill) {
-                        g.setColor((this.entries.get(i)).colourLine);
-                        g.fillOval(decodeX(entries.get(i).x[0]), decodeY(entries.get(i).y[0]), decodeX(entries.get(i).x[1] - entries.get(i).x[0]), decodeY(entries.get(i).y[1] - entries.get(i).y[0]));
-                    } else {
+                    if (!entries.get(i).fill) { //
                         g.drawOval(decodeX(entries.get(i).x[0]), decodeY(entries.get(i).y[0]), decodeX(entries.get(i).x[1] - entries.get(i).x[0]), decodeY(entries.get(i).y[1] - entries.get(i).y[0]));
+                    } else {
+                        g.setColor((this.entries.get(i)).colourLine);
+                        g.drawOval(decodeX(entries.get(i).x[0]), decodeY(entries.get(i).y[0]), decodeX(entries.get(i).x[1] - entries.get(i).x[0]), decodeY(entries.get(i).y[1] - entries.get(i).y[0]));
+                        g.setColor((this.entries.get(i)).colourFill);
+                        //various numbers have been tweaked so that the filler oval does not overlap the underlying outline (z-fighting)
+                        g.fillOval(decodeX(entries.get(i).x[0])+1, decodeY(entries.get(i).y[0])+1, decodeX(entries.get(i).x[1] - entries.get(i).x[0])-2, decodeY(entries.get(i).y[1] - entries.get(i).y[0])-2);
                     }
                 }
             }
         }
     }
 
-    /*private class MotionHandler implements MouseMotionListener {
-        private MotionHandler() {
-        }
-
-        public void mouseMoved(MouseEvent mE) {
-        }
-        public void mouseDragged(MouseEvent mE) {
-        }
-    }*/
+    /**
+     * mouseHandler is an implementation of the MouseListener class.
+     * listens for mouse presses and mouse releases in order to collect
+     * and save coordinates to an array
+     */
     private class mouseHandler implements MouseListener {
         private mouseHandler() {
 
@@ -162,15 +222,23 @@ public class PaintCanvas extends JPanel {
         public void mouseExited(MouseEvent me) {
         }
 
+        /**
+         * Collects x and y coordinates when mouse is pressed.
+         *
+         * @param me mouseEvent listens for mouse clicks
+         */
         public void mousePressed(MouseEvent me) {
             x1 = me.getX();
             y1 = me.getY();
             repaint();
-            //System.out.println(x1);
-            //System.out.println(y1);
-
         }
 
+        /**
+         * Adds a new entry to entries based on the selected shape
+         * Collects finishing x and y coordinates when mouse is released
+         *
+         * @param me mouseEvent listens for mouse clicks
+         */
         public void mouseReleased(MouseEvent me) {
 
             if (btnFill.isSelected()) {
@@ -215,6 +283,10 @@ public class PaintCanvas extends JPanel {
 
 
     }
+
+    /**
+     * Sets the background colour of all buttons to null
+     */
     private void nullBtns() {
         btnPlot.setBackground((Color)null);
         btnLine.setBackground((Color)null);
@@ -226,11 +298,21 @@ public class PaintCanvas extends JPanel {
         private actionHandler() {
         }
 
+        /**
+         * Defines the actions of each button on the buttonPanel
+         * <p>
+         * Sets the value of the shape int and changes the colour
+         * of the active button
+         * <p>
+         * Opens the colourPicker.
+         *
+         * @param a
+         */
         public void actionPerformed(ActionEvent a) {
-            if (a.getSource()== btnPlot){
-                shape = 0;
-                nullBtns();
-                btnPlot.setBackground(Color.CYAN);
+            if (a.getSource()== btnPlot){ //If the Plot button is selected
+                shape = 0; // Set shape to 0
+                nullBtns(); // Set all buttons to a null background colour
+                btnPlot.setBackground(Color.CYAN); //set the Plot button to cyan
             }
             if (a.getSource()== btnLine){
                 shape = 1;
@@ -249,10 +331,11 @@ public class PaintCanvas extends JPanel {
                 btnOval.setBackground(Color.CYAN);
             }
             if (a.getSource() == btnCol) {
+                //Open the colour picker dialogue box
                 Color c = JColorChooser.showDialog(null,"Primary Colour",Color.BLACK,false);
-                btnCol.setBackground(c);
+                btnCol.setBackground(c); //set the Background of the Colour Button to the selected colour.
                 entries.add(new ColorFill(c));
-                colourLine = c;
+                colourLine = c; //Publish the selected colour
             }
             if (a.getSource() == btnColF) {
                 Color c2 = JColorChooser.showDialog(null,"Secondary Colour",Color.WHITE,false);

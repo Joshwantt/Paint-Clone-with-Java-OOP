@@ -1,5 +1,10 @@
 import java.awt.*;
 
+/**
+ * Extends the Shapes abstract.
+ * Collects Coordinates, Colours and Fill Bool for entry into Array.
+ * Represents the Rectangle tool.
+ */
 public class Rectangle extends Shapes {
     public Rectangle(float x1, float y1, float x2, float y2,boolean f, Color cF, Color cL)
     {

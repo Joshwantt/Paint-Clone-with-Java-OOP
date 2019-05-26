@@ -8,10 +8,16 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+/**
+ * This class extends the JFrame library in order to create a pop-out GUI window for selecting colours.
+ */
 public class ColourChooser extends JFrame {
     private JLabel label = new JLabel("Label");
     private JButton chooseBtn = new JButton("Choose Color");
 
+    /**
+     * Constructs a 300*100 window
+     */
     public ColourChooser() {
         this.setSize(300, 100);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

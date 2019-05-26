@@ -1,5 +1,9 @@
 import java.awt.*;
-
+/**
+ * Extends the Shapes abstract.
+ * Collects Coordinates, Colours and Fill Bool for entry into Array.
+ * Represents the Oval tool.
+ */
 public class Oval extends Shapes {
     public Oval(float x1, float y1, float x2, float y2, boolean f, Color cF, Color cL)
     {
