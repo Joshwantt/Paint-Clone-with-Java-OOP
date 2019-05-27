@@ -6,9 +6,10 @@ import java.awt.*;
  * Represents the Plot tool
  */
 public class Plot extends Shapes {
-    public Plot(float x, float y) {
+    public Plot(float x, float y, Color cL) {
         super.type = 0;
         super.x[0] = x;
         super.y[0] = y;
+        super.colourLine = cL;
     }
 }

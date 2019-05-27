@@ -35,6 +35,7 @@ public class PaintCanvas extends JPanel {
     private ArrayList<Shapes> entries = new ArrayList(); //The main array for storing entries of shapes, complete with coordinates and colours
     private mouseHandler mouse = new mouseHandler(); // Construction of mouseHandler
     private actionHandler acts = new actionHandler(); // Construction of actionHandler
+    private GetHex retHex = new GetHex(); //Construction of returnHex
 
     private static final Color BG = Color.WHITE;
     int x1, x2, y1, y2; //x1,y1 represent the x,y coordinates gathered when clicking the mouse IN, x2,y2 represent the mouse being released.
@@ -251,14 +252,13 @@ public class PaintCanvas extends JPanel {
                 case 0:
                     x2 = me.getX();
                     y2 = me.getY();
-                    entries.add(new Plot(encodeX(x2), encodeY(y2)));
-                    System.out.println(entries.size());
+                    entries.add(new Plot(encodeX(x2), encodeY(y2), colourLine));
                     repaint();
                     break;
                 case 1:
                     x2 = me.getX();
                     y2 = me.getY();
-                    entries.add(new Line(encodeX(x1), encodeY(y1), encodeX(x2), encodeY(y2)));
+                    entries.add(new Line(encodeX(x1), encodeY(y1), encodeX(x2), encodeY(y2), colourLine));
                     repaint();
                     break;
                 case 2:
@@ -331,20 +331,24 @@ public class PaintCanvas extends JPanel {
                 btnOval.setBackground(Color.CYAN);
             }
             if (a.getSource() == btnCol) {
+                String hexL = "#"+Integer.toHexString(colourLine.getRGB()).substring(2);
                 //Open the colour picker dialogue box
                 Color c = JColorChooser.showDialog(null,"Primary Colour",Color.BLACK,false);
                 btnCol.setBackground(c); //set the Background of the Colour Button to the selected colour.
-                entries.add(new ColorFill(c));
+                //entries.add(new ColorFill(c));
                 colourLine = c; //Publish the selected colour
             }
             if (a.getSource() == btnColF) {
                 Color c2 = JColorChooser.showDialog(null,"Secondary Colour",Color.WHITE,false);
                 btnColF.setBackground(c2);
-                entries.add(new ColorFill(c2));
+                //entries.add(new ColorFill(c2));
                 colourFill = c2;
             }
 
             if (a.getSource() == btnSave) { //save code
+                Color colHoldL = Color.BLACK;
+                Color colHoldF = Color.WHITE;
+
                 try (PrintWriter out = new PrintWriter("save.vec")) {
                     if (!entries.isEmpty()) {
                         for (int i = 0; i < entries.size(); ++i) {
@@ -364,18 +368,42 @@ public class PaintCanvas extends JPanel {
                                 */
 
                             if (entries.get(i).type == 0) {
+                                if (entries.get(i).colourLine != colHoldL){
+                                    colHoldL = entries.get(i).colourLine;
+                                    out.println("PEN "+retHex.returnHex(colHoldL));
+                                }
                                 String line = String.format("PLOT %6f %6f",entries.get(i).x[0],entries.get(i).y[0]);
                                 out.println(line);
                             }
                             if (entries.get(i).type == 1) {
+                                if (entries.get(i).colourLine != colHoldL){
+                                    colHoldL = entries.get(i).colourLine;
+                                    out.println("PEN "+retHex.returnHex(colHoldL));
+                                }
                                 String line = String.format("LINE %6f %6f %6f %6f",entries.get(i).x[0],entries.get(i).y[0],entries.get(i).x[1],entries.get(i).y[1]);
                                 out.println(line);
                             }
                             if (entries.get(i).type == 2) {
+                                if (entries.get(i).colourLine != colHoldL){
+                                    colHoldL = entries.get(i).colourLine;
+                                    out.println("PEN "+retHex.returnHex(colHoldL));
+                                }
+                                if (entries.get(i).colourFill != colHoldF){
+                                    colHoldF = entries.get(i).colourFill;
+                                    out.println("FILL "+retHex.returnHex(colHoldF));
+                                }
                                 String line = String.format("RECTANGLE %6f %6f %6f %6f",entries.get(i).x[0],entries.get(i).y[0],entries.get(i).x[1],entries.get(i).y[1]);
                                 out.println(line);
                             }
                             if (entries.get(i).type == 3) {
+                                if (entries.get(i).colourLine != colHoldL){
+                                    colHoldL = entries.get(i).colourLine;
+                                    out.println("PEN "+retHex.returnHex(colHoldL));
+                                }
+                                if (entries.get(i).colourFill != colHoldF){
+                                    colHoldF = entries.get(i).colourFill;
+                                    out.println("FILL "+retHex.returnHex(colHoldF));
+                                }
                                 String line = String.format("ELLIPSE %6f %6f %6f %6f",entries.get(i).x[0],entries.get(i).y[0],entries.get(i).x[1],entries.get(i).y[1]);
                                 out.println(line);
                             }
