@@ -10,7 +10,7 @@ public class GetHex {
         blue = col.getBlue();
         green = col.getGreen();
 
-        String hex = String.format("#%02x%02x%02x", red, green, blue);
+        String hex = String.format("#%02X%02X%02X", red, green, blue);
         return hex;
     }
 }

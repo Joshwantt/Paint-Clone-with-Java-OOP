@@ -1,13 +1,10 @@
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import javax.swing.JButton;
 import javax.swing.JPanel;
-import javax.swing.filechooser.FileSystemView;
-import java.io.PrintWriter;
 
 
 import static javax.swing.UIManager.get;
@@ -59,6 +56,8 @@ public class PaintCanvas extends JPanel {
     private JCheckBox btnFill = new JCheckBox("Fill"); //Choose whether or not shape gets Fill Colour
     private JButton btnSave = new JButton("SAVE"); //Save
     private JButton btnLoad = new JButton("LOAD"); //Load
+    private JButton btnUndo = new JButton("UNDO"); //Undo
+    private JButton btnClear = new JButton("CLEAR"); //Undo
 
     /**
      * Builds and formats the requisite components.
@@ -75,6 +74,8 @@ public class PaintCanvas extends JPanel {
         this.btnColF.addActionListener(acts);
         this.btnSave.addActionListener(acts);
         this.btnLoad.addActionListener(acts);
+        this.btnUndo.addActionListener(acts);
+        this.btnClear.addActionListener(acts);
         this.pnlBtns.add(this.btnPlot);
         this.pnlBtns.add(this.btnLine);
         this.pnlBtns.add(this.btnRect);
@@ -84,6 +85,8 @@ public class PaintCanvas extends JPanel {
         this.pnlBtns.add(this.btnFill);
         this.pnlBtns.add(this.btnSave);
         this.pnlBtns.add(this.btnLoad);
+        this.pnlBtns.add(this.btnUndo);
+        this.pnlBtns.add(this.btnClear);
         this.btnCol.setBackground(Color.BLACK); //Set default colours for Fill and Line colours.
         this.btnColF.setBackground(Color.WHITE);
 
@@ -340,11 +343,97 @@ public class PaintCanvas extends JPanel {
                 colourFill = c2;
             }
 
+            if (a.getSource() == btnUndo) {
+                    entries.remove(entries.size()-1);
+                    repaint();
+            }
+
+            if (a.getSource() == btnClear) {
+                entries.clear();
+                repaint();
+            }
+
             if (a.getSource() == btnLoad) {
 
                 Load loader = new Load();
                 loadDir = loader.loadFile();
                 System.out.println(loadDir);
+                BufferedReader abc = null;
+
+                try {
+                    abc = new BufferedReader(new FileReader(loadDir));
+                } catch (FileNotFoundException ex) {
+                    ex.printStackTrace();
+                }
+                ArrayList<String> lines = new ArrayList();
+
+                lines.add("PEN " + retHex.returnHex(Color.BLACK));
+                lines.add("PEN " + retHex.returnHex(Color.WHITE));
+
+                String line;
+
+                try {
+                    while ((line = abc.readLine()) != null) {
+                        lines.add(line);
+                        System.out.println(line);
+                    }
+                } catch (IOException ex) {
+                    System.out.println("Error 1");
+                }
+
+                try {
+                    abc.close();
+                } catch (IOException ex) {
+                    System.out.println("Error 2");
+                }
+
+
+                Boolean fills = false;
+                Color LineCol = Color.decode("#000000");
+                Color FillCol = Color.decode("#ffffff");
+                entries.clear();
+
+                for (int i = 0; i < lines.size(); ++i) {
+                    String[] rows = lines.get(i).split(" ");
+
+
+                    if (rows[0].contains("PEN")) {
+                        LineCol = Color.decode(rows[1]);
+                        System.out.println(rows[1]);
+                    }
+
+                    if (rows[0].contains("FILL")) {
+                        if (rows[1].contains("#FFFFFF") ) {
+                            fills = false;
+                        }
+                        else {
+                            fills = true;
+                            FillCol = Color.decode(rows[1]);
+                        }
+                    }
+
+
+
+                    if (rows[0].contains("PLOT")) {
+                        entries.add(new Plot(Float.parseFloat(rows[1]), Float.parseFloat(rows[2]), LineCol));
+                        repaint();
+                    }
+
+                    if (rows[0].contains("LINE")) {
+                        entries.add(new Line(Float.parseFloat(rows[1]), Float.parseFloat(rows[2]), Float.parseFloat(rows[3]), Float.parseFloat(rows[4]), LineCol));
+                        repaint();
+                    }
+
+                    if (rows[0].contains("RECTANGLE")) {
+                        entries.add(new Rectangle(Float.parseFloat(rows[1]), Float.parseFloat(rows[2]), Float.parseFloat(rows[3]), Float.parseFloat(rows[4]), fills, FillCol, LineCol));
+                        repaint();
+                    }
+
+                    if (rows[0].contains("ELLIPSE")) {
+                        entries.add(new Oval(Float.parseFloat(rows[1]), Float.parseFloat(rows[2]), Float.parseFloat(rows[3]), Float.parseFloat(rows[4]), fills, FillCol, LineCol));
+                        repaint();
+                    }
+                }
             }
 
             if (a.getSource() == btnSave) { //save code
@@ -354,20 +443,6 @@ public class PaintCanvas extends JPanel {
                 try (PrintWriter out = new PrintWriter("save.vec")) {
                     if (!entries.isEmpty()) {
                         for (int i = 0; i < entries.size(); ++i) {
-
-                                /*
-                                if (entries.get(i).colourLine != entries.get(i-1).colourLine && (i>0)) {
-                                    Color c = entries.get(i).colourLine;
-                                    String line = String.format("PEN #%02X%02X%02X", c.getRed(), c.getGreen(), c.getBlue());
-                                    out.println(line);
-                                }
-
-                                if (entries.get(i).colourFill != entries.get(i-1).colourFill) {
-                                    Color c = entries.get(i).colourFill;
-                                    String line = String.format("FILL #%02X%02X%02X", c.getRed(), c.getGreen(), c.getBlue());
-                                    out.println(line);
-                                }
-                                */
 
                             if (entries.get(i).type == 0) {
                                 if (entries.get(i).colourLine != colHoldL){
