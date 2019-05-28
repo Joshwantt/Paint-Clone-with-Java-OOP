@@ -15,5 +15,20 @@ public class Oval extends Shapes {
         super.fill = f;
         super.colourFill = cF;
         super.colourLine = cL;
+
+        float holdX;
+        float holdY;
+
+        //Parameters for handling negative X or Y coordinates (Making a shape that does not go down and right
+        if (x[0] > x[1]){
+            holdX = x[0];
+            x[0] = x[1];
+            x[1] = holdX;
+        }
+        if (y[0] > y[1]){
+            holdY = y[0];
+            y[0] = y[1];
+            y[1] = holdY;
+        }
     }
 }

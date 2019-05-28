@@ -1,10 +1,12 @@
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import javax.swing.JButton;
 import javax.swing.JPanel;
+import javax.swing.filechooser.FileSystemView;
 import java.io.PrintWriter;
 
 
@@ -44,6 +46,7 @@ public class PaintCanvas extends JPanel {
     private Color colourLine = Color.BLACK; // The colour of shape outlines
     private Color colourFill = Color.WHITE; // The colour of shape fills
     private boolean fill; //Whether or not a shape has a fill
+    private String loadDir; //Directory of loaded file.
 
     private JPanel pnlBtns = new JPanel(); //The top panel full of buttons
     private JPanel pnlCanvas = new JPanel(); //The main painting canvas where graphics are drawn
@@ -55,6 +58,7 @@ public class PaintCanvas extends JPanel {
     private JButton btnColF = new JButton("  "); //Fill Colour
     private JCheckBox btnFill = new JCheckBox("Fill"); //Choose whether or not shape gets Fill Colour
     private JButton btnSave = new JButton("SAVE"); //Save
+    private JButton btnLoad = new JButton("LOAD"); //Load
 
     /**
      * Builds and formats the requisite components.
@@ -70,6 +74,7 @@ public class PaintCanvas extends JPanel {
         this.btnCol.addActionListener(acts);
         this.btnColF.addActionListener(acts);
         this.btnSave.addActionListener(acts);
+        this.btnLoad.addActionListener(acts);
         this.pnlBtns.add(this.btnPlot);
         this.pnlBtns.add(this.btnLine);
         this.pnlBtns.add(this.btnRect);
@@ -78,6 +83,7 @@ public class PaintCanvas extends JPanel {
         this.pnlBtns.add(this.btnColF);
         this.pnlBtns.add(this.btnFill);
         this.pnlBtns.add(this.btnSave);
+        this.pnlBtns.add(this.btnLoad);
         this.btnCol.setBackground(Color.BLACK); //Set default colours for Fill and Line colours.
         this.btnColF.setBackground(Color.WHITE);
 
@@ -177,18 +183,7 @@ public class PaintCanvas extends JPanel {
                         g.setColor(entries.get(i).colourLine);
                         g.drawRect(decodeX(entries.get(i).x[0]), decodeY(entries.get(i).y[0]), decodeX(entries.get(i).x[1] - entries.get(i).x[0]), decodeY(entries.get(i).y[1] - entries.get(i).y[0]));
                         g.setColor(entries.get(i).colourFill);
-
-                        //The following if statements are for formatting the filler rectangle based on positive and negative x,y coords
-                        if (((entries.get(i).x[1] - entries.get(i).x[0]) > 0) && (entries.get(i).y[1] - entries.get(i).y[0]) > 0) { // Positive X and Y coords
-                            g.fillRect(decodeX(entries.get(i).x[0]) + 1, decodeY(entries.get(i).y[0]) + 1, (decodeX(entries.get(i).x[1] - entries.get(i).x[0])) - 1, decodeY(entries.get(i).y[1] - entries.get(i).y[0]) - 1);
-                        } else if (((entries.get(i).x[1] - entries.get(i).x[0]) < 0) && (entries.get(i).y[1] - entries.get(i).y[0]) > 0) { // Negative X Positive Y
-                            g.fillRect(decodeX(entries.get(i).x[0]) -1, decodeY(entries.get(i).y[0]) + 1, (decodeX(entries.get(i).x[1] - entries.get(i).x[0])) +3, decodeY(entries.get(i).y[1] - entries.get(i).y[0]) -1);
-                        } else if (((entries.get(i).x[1] - entries.get(i).x[0]) < 0) && (entries.get(i).y[1] - entries.get(i).y[0]) < 0) { // Negative X and Y
-                            g.fillRect(decodeX(entries.get(i).x[0]) - 1, decodeY(entries.get(i).y[0]) - 1, (decodeX(entries.get(i).x[1] - entries.get(i).x[0])) +3, decodeY(entries.get(i).y[1] - entries.get(i).y[0]) +3 );
-                        }
-                        else if (((entries.get(i).x[1] - entries.get(i).x[0]) > 0) && (entries.get(i).y[1] - entries.get(i).y[0]) < 0) {// Positive X Negative Y
-                            g.fillRect(decodeX(entries.get(i).x[0]) + 1, decodeY(entries.get(i).y[0]) - 1, (decodeX(entries.get(i).x[1] - entries.get(i).x[0])) -1, decodeY(entries.get(i).y[1] - entries.get(i).y[0]) +3);
-                        }
+                        g.fillRect(decodeX(entries.get(i).x[0]) + 1, decodeY(entries.get(i).y[0]) + 1, (decodeX(entries.get(i).x[1] - entries.get(i).x[0])) - 1, decodeY(entries.get(i).y[1] - entries.get(i).y[0]) - 1);
 
                     }
                 }
@@ -345,6 +340,13 @@ public class PaintCanvas extends JPanel {
                 colourFill = c2;
             }
 
+            if (a.getSource() == btnLoad) {
+
+                Load loader = new Load();
+                loadDir = loader.loadFile();
+                System.out.println(loadDir);
+            }
+
             if (a.getSource() == btnSave) { //save code
                 Color colHoldL = Color.BLACK;
                 Color colHoldF = Color.WHITE;
@@ -415,6 +417,7 @@ public class PaintCanvas extends JPanel {
                 catch (IOException ex) {
                     //somethings gone wrong with save
                 }
+
             }
         }
     }
