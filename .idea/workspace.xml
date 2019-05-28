@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="59bf3a8f-11b0-4c20-bf71-f9c01ab40e15" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/save.vec" beforeDir="false" afterPath="$PROJECT_DIR$/save.vec" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/302-Ass2-169/Oval.class" beforeDir="false" afterPath="$PROJECT_DIR$/untitled2/out/production/302-Ass2-169/Oval.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/302-Ass2-169/PaintCanvas$actionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/untitled2/out/production/302-Ass2-169/PaintCanvas$actionHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/302-Ass2-169/PaintCanvas$mouseHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/untitled2/out/production/302-Ass2-169/PaintCanvas$mouseHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/302-Ass2-169/PaintCanvas.class" beforeDir="false" afterPath="$PROJECT_DIR$/untitled2/out/production/302-Ass2-169/PaintCanvas.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/302-Ass2-169/Rectangle.class" beforeDir="false" afterPath="$PROJECT_DIR$/untitled2/out/production/302-Ass2-169/Rectangle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/src/Oval.java" beforeDir="false" afterPath="$PROJECT_DIR$/untitled2/src/Oval.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/src/PaintCanvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/untitled2/src/PaintCanvas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/src/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/untitled2/src/Rectangle.java" afterDir="false" />
-    </list>
+    <list default="true" id="59bf3a8f-11b0-4c20-bf71-f9c01ab40e15" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,8 +73,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/untitled2/src/Rectangle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="33" column="1" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
+            <state relative-caret-position="544">
+              <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -182,7 +171,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559030536435" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559030985372" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -383,8 +372,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/untitled2/src/Rectangle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="1" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
+        <state relative-caret-position="544">
+          <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
         </state>
       </provider>
     </entry>
