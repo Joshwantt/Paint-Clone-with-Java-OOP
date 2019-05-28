@@ -2,12 +2,12 @@
  * The Main class for the Graphical Paint Tool program.
  * Constructs PaintFrame.
  *
- * @authors Joshua Want, Callum Woodland
+ * @author Joshua Want, Callum Woodland
  */
 public class main {
     /**
      * Constructs a new PaintFrame
-     * @param args
+     * @param args Command Line Arguments
      */
     public static void main(String[] args) {
         new PaintFrame();

@@ -3,12 +3,16 @@ import javax.swing.filechooser.FileSystemView;
 import java.awt.*;
 import java.io.File;
 
+/**
+ * Class responsible for opening the JFileChooser browsing menu
+ */
 public class Load {
 
-    public Load() {
 
-    }
-
+    /**
+     * Opens file browser, collects absolute directory
+     * @return absolute directory of chosen file.
+     */
     public String loadFile() {
         JFileChooser fileChooser = new JFileChooser(FileSystemView.getFileSystemView().getHomeDirectory());
         int returnVal = fileChooser.showOpenDialog(null);
