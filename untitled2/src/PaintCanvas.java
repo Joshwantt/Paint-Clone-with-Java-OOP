@@ -368,7 +368,7 @@ public class PaintCanvas extends JPanel {
                 ArrayList<String> lines = new ArrayList();
 
                 lines.add("PEN " + retHex.returnHex(Color.BLACK));
-                lines.add("PEN " + retHex.returnHex(Color.WHITE));
+                lines.add("FILL " + retHex.returnHex(Color.WHITE));
 
                 String line;
 
@@ -405,6 +405,7 @@ public class PaintCanvas extends JPanel {
                     if (rows[0].contains("FILL")) {
                         if (rows[1].contains("#FFFFFF") ) {
                             fills = false;
+                            FillCol = Color.decode(rows[1]);
                         }
                         else {
                             fills = true;
