@@ -101,7 +101,7 @@ public class PaintCanvas extends JPanel {
      * Converts integer X coordinates into float values.
      *
      * @param width the width of the screen in int format.
-     * @return
+     * @return encoded position of x as percentage of screen width
      */
     public float encodeX(int width) { //encode pixel location to percentage of total screen width
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
@@ -114,7 +114,7 @@ public class PaintCanvas extends JPanel {
      * Converts integer Y coordinates into float values.
      *
      * @param height the height of the screen in int format.
-     * @return
+     * @return encoded position of y as percentage of screen height
      */
     public float encodeY(int height) {
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
@@ -127,7 +127,7 @@ public class PaintCanvas extends JPanel {
      * Converts the encoded float values into integer coordinates.
      *
      * @param width the width of the screen in float format.
-     * @return
+     * @return position on screen in pixels
      */
     public int decodeX(float width) {
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
@@ -139,7 +139,7 @@ public class PaintCanvas extends JPanel {
      * Converts the encoded float values into integer coordinates.
      *
      * @param height the height of the screen in float format.
-     * @return
+     * @return position on screen in pixels
      */
     public int decodeY(float height) {
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
