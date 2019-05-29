@@ -31,4 +31,23 @@ public class Rectangle extends Shapes {
             y[1] = holdY;
         }
     }
+    public float getXo() {
+        return x[0];
+    }
+
+    public float[] getY() {
+        return this.y;
+    }
+
+    public boolean getFill() {
+        return this.fill;
+    }
+
+    public Color getColorF() {
+        return this.colourFill;
+    }
+
+    public Color getColorL() {
+        return this.colourLine;
+    }
 }
