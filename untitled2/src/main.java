@@ -4,6 +4,7 @@
  *
  * @author Joshua Want, Callum Woodland
  */
+
 public class main {
     /**
      * Constructs a new PaintFrame
@@ -11,5 +12,8 @@ public class main {
      */
     public static void main(String[] args) {
         new PaintFrame();
+
+        new TestJunit();
+
     }
 }

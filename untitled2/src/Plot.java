@@ -12,4 +12,16 @@ public class Plot extends Shapes {
         super.y[0] = y;
         super.colourLine = cL;
     }
+
+    public float getX() {
+        return this.x[0];
+    }
+
+    public float getY() {
+        return this.y[0];
+    }
+
+    public Color getColorL() {
+        return this.colourLine;
+    }
 }

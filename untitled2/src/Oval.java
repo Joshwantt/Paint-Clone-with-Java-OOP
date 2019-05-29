@@ -31,4 +31,23 @@ public class Oval extends Shapes {
             y[1] = holdY;
         }
     }
+    public float[] getX() {
+        return this.x;
+    }
+
+    public float[] getY() {
+        return this.y;
+    }
+
+    public boolean getFill() {
+        return this.fill;
+    }
+
+    public Color getColorF() {
+        return this.colourFill;
+    }
+
+    public Color getColorL() {
+        return this.colourLine;
+    }
 }

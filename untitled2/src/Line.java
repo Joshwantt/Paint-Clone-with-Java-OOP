@@ -14,4 +14,16 @@ public class Line extends Shapes {
         super.y[1] = y2;
         super.colourLine = cL;
     }
+
+    public float[] getX() {
+        return this.x;
+    }
+
+    public float[] getY() {
+        return this.y;
+    }
+
+    public Color getColorL() {
+        return this.colourLine;
+    }
 }

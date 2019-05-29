@@ -31,8 +31,8 @@ public class Rectangle extends Shapes {
             y[1] = holdY;
         }
     }
-    public float getXo() {
-        return x[0];
+    public float[] getX() {
+        return this.x;
     }
 
     public float[] getY() {
