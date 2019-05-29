@@ -3,6 +3,7 @@ import javax.swing.*;
 import java.awt.event.*;
 import java.io.*;
 import java.util.ArrayList;
+import java.util.SortedMap;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
@@ -37,7 +38,7 @@ public class PaintCanvas extends JPanel {
     private GetHex retHex = new GetHex(); //Construction of returnHex
 
     private static final Color BG = Color.WHITE;
-    int x1, x2, y1, y2; //x1,y1 represent the x,y coordinates gathered when clicking the mouse IN, x2,y2 represent the mouse being released.
+    private int x1, x2, y1, y2; //x1,y1 represent the x,y coordinates gathered when clicking the mouse IN, x2,y2 represent the mouse being released.
     private Color colour = new Color(0, 0, 0);
     private int shape = 0; //The shape selected in accordance with the pen tool selected
     private Color colourLine = Color.BLACK; // The colour of shape outlines
@@ -95,6 +96,7 @@ public class PaintCanvas extends JPanel {
         this.addMouseListener(this.mouse);
         nullBtns(); //set background colour of all buttons (excepting Col and ColF) to null.
         btnPlot.setBackground(Color.CYAN); //Set background of Plot to Cyan as it is selected by default.
+
     }
 
     /**
@@ -103,9 +105,10 @@ public class PaintCanvas extends JPanel {
      * @param width the width of the screen in int format.
      * @return encoded position of x as percentage of screen width
      */
-    public float encodeX(int width) { //encode pixel location to percentage of total screen width
-        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        float pixels = (float)Math.round(screenSize.height * 0.85);
+    private float encodeX(int width) { //encode pixel location to percentage of total screen width
+        //Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        int screenSize = getWidth();
+        float pixels = (float)Math.round(screenSize/*.height * 0.85*/);
         float decimal = (width/pixels);
         return decimal; //Return a percentage of the screen width
     }
@@ -116,9 +119,10 @@ public class PaintCanvas extends JPanel {
      * @param height the height of the screen in int format.
      * @return encoded position of y as percentage of screen height
      */
-    public float encodeY(int height) {
-        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        float pixels = (float)Math.round(screenSize.height * 0.85);
+    private float encodeY(int height) {
+        //Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        int screenSize = getHeight();
+        float pixels = (float)Math.round(screenSize/*.height * 0.85*/);
         float decimal = (height/pixels);
         return decimal;//Return a percentage of the screen height
     }
@@ -129,10 +133,11 @@ public class PaintCanvas extends JPanel {
      * @param width the width of the screen in float format.
      * @return position on screen in pixels
      */
-    public int decodeX(float width) {
-        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        float pixels = (float)Math.round(screenSize.height * 0.85);
-        int location = (int)Math.round(width*pixels);
+    private int decodeX(float width) {
+        //Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        int screenSize = getWidth();
+        float pixels = (float)Math.round(screenSize/*.height * 0.85*/);
+        int location = Math.round(width*pixels);
         return location;//Convert Screen width percentage into pixel integer
     }
     /**
@@ -141,10 +146,11 @@ public class PaintCanvas extends JPanel {
      * @param height the height of the screen in float format.
      * @return position on screen in pixels
      */
-    public int decodeY(float height) {
-        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        float pixels = (float)Math.round(screenSize.height * 0.85);
-        int location = (int)Math.round(height*pixels);
+    private int decodeY(float height) {
+        //Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        int screenSize = getHeight();
+        float pixels = (float)Math.round(screenSize/*.height * 0.85*/);
+        int location = Math.round(height*pixels);
         return location;//Convert Screen height percentage into pixel integer
     }
 

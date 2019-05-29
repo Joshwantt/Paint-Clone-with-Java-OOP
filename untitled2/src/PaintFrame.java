@@ -13,12 +13,11 @@ import javax.swing.JFrame;
  */
 public class PaintFrame extends JFrame {
     public PaintFrame() {
-        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        //int size = (int)Math.round(screenSize.height * 0.85);
+        int ScreenDimensions = 1280;
 
         PaintCanvas panel = new PaintCanvas();
         this.setContentPane(panel);
-        this.setSize(720,720);
+        this.setSize(1280,1280);
         this.setVisible(true);
         this.setResizable(true);
         this.setDefaultCloseOperation(3);
