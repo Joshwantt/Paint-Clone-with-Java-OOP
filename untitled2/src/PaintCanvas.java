@@ -32,7 +32,7 @@ import static javax.swing.UIManager.get;
  */
 public class PaintCanvas extends JPanel {
     private ArrayList<Shapes> entries = new ArrayList(); //The main array for storing entries of shapes, complete with coordinates and colours
-    private ArrayList grid = new ArrayList();
+    private ArrayList<Shapes> grid = new ArrayList();
     private mouseHandler mouse = new mouseHandler(); // Construction of mouseHandler
     private actionHandler acts = new actionHandler(); // Construction of actionHandler
     private GetHex retHex = new GetHex(); //Construction of returnHex
@@ -46,6 +46,8 @@ public class PaintCanvas extends JPanel {
     private Color colourFill = Color.WHITE; // The colour of shape fills
     private boolean fill; //Whether or not a shape has a fill
     private String loadDir; //Directory of loaded file.
+    private float PlotW = encodeX(10); //Encoded width of PLOT
+    private float PlotH = encodeY(10); //Encoded Height of PLOT
 
     private JPanel pnlBtns = new JPanel(); //The top panel full of buttons
     private JPanel pnlCanvas = new JPanel(); //The main painting canvas where graphics are drawn
@@ -153,6 +155,7 @@ public class PaintCanvas extends JPanel {
         return location;//Convert Screen height percentage into pixel integer
     }
 
+
     /**
      * Overrides the paintComponent in JComponent to draw shapes from an array.
      * <p>
@@ -209,8 +212,7 @@ public class PaintCanvas extends JPanel {
             }
             for (int i = 0; i < grid.size() ; ++i ){
                 g.setColor(colour.LIGHT_GRAY);
-                g.drawLine(0,10*i+5,getWidth(),10*i+5);
-                g.drawLine((10*i)+5,0,10*i+5,getHeight());
+                g.drawLine(decodeX(grid.get(i).x[0]), decodeY(grid.get(i).y[0]), decodeX(grid.get(i).x[1]), decodeY(grid.get(i).y[1]));
             }
         }
     }
@@ -367,7 +369,8 @@ public class PaintCanvas extends JPanel {
                 if (btnRnd.isSelected()){
                     rnd = 10;
                     for (int i = 0; i < getHeight(); i++) {
-                        grid.add(new Line(0, 0, 0, 0 , Color.LIGHT_GRAY));
+                        grid.add(new Line(encodeX(10*i+5), 0, encodeX(10*i+5), encodeY(getHeight()) , Color.LIGHT_GRAY));
+                        grid.add(new Line(0, encodeY(10*i+5), encodeX(getWidth()), encodeY(10*i+5), Color.LIGHT_GRAY));
                     }
                 }else{
                     rnd = 1;
