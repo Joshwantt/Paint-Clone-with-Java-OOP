@@ -4,12 +4,13 @@ import java.awt.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class TestJunit {
+public class TestJunit extends PaintCanvas {
 
     static Rectangle rect;
     static Plot plot;
     static Line line;
     static Oval oval;
+    static GetHex retHex;
 
     @BeforeAll
     static void before(){
@@ -21,6 +22,8 @@ public class TestJunit {
         System.out.println("Line created");
         oval = new Oval(1,2,3,4,true,Color.WHITE,Color.WHITE);
         System.out.println("Line created");
+        retHex = new GetHex();
+        System.out.println("RETHEX created");
     }
 
     //RECTANGLE
@@ -28,13 +31,13 @@ public class TestJunit {
     @Test
     public void testRectangleX() {
         float[] x = {1,3};
-        assertEquals(x, rect.getX());
+        assertArrayEquals(x, rect.getX());
     }
 
     @Test
     public void testRectangleY() {
         float[] y = {2,4};
-        assertEquals(y, rect.getY());
+        assertArrayEquals(y, rect.getY());
     }
 
     @Test
@@ -74,13 +77,13 @@ public class TestJunit {
     @Test
     public void testLineX() {
         float[] x = {1,3};
-        assertEquals(x, line.getX());
+        assertArrayEquals(x, line.getX());
     }
 
     @Test
     public void testLineY() {
         float[] y = {2,4};
-        assertEquals(y, line.getY());
+        assertArrayEquals(y, line.getY());
     }
 
     @Test
@@ -93,13 +96,13 @@ public class TestJunit {
     @Test
     public void testOvalX() {
         float[] x = {1,3};
-        assertEquals(x, oval.getX());
+        assertArrayEquals(x, oval.getX());
     }
 
     @Test
     public void testOvalY() {
         float[] y = {2,4};
-        assertEquals(y, oval.getY());
+        assertArrayEquals(y, oval.getY());
     }
 
     @Test
@@ -114,6 +117,26 @@ public class TestJunit {
     @Test
     public void testOvalColorF() {
         assertEquals(Color.WHITE, oval.getColorF());
+    }
+
+    //Location encoding
+
+    @Test
+    public void testEncodeDecodeX() {
+        assertEquals(5, decodeX(encodeX(5)));
+    }
+
+    @Test
+    public void testEncodeDecodeY() {
+        assertEquals(5, decodeY(encodeY(5)));
+    }
+
+    //Hex coversion testing
+
+
+    @Test
+    public void testGetHex() {
+        assertEquals("#FFFFFF", retHex.returnHex(Color.WHITE));
     }
 
 }

@@ -6,8 +6,8 @@ import java.awt.*;
  */
 public abstract class Shapes {
     int type; // The type of shape
-    float[] x = new float[3]; // X coordinate
-    float[] y = new float[3]; // Y coordinate
+    float[] x = new float[2]; // X coordinate
+    float[] y = new float[2]; // Y coordinate
     boolean fill; // Whether or not the shape has a Fill colour or is transparent
 
     Color colourFill; // Colour of shape's fill, see boolean fill
