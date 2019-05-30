@@ -32,12 +32,14 @@ import static javax.swing.UIManager.get;
  */
 public class PaintCanvas extends JPanel {
     private ArrayList<Shapes> entries = new ArrayList(); //The main array for storing entries of shapes, complete with coordinates and colours
+    private ArrayList grid = new ArrayList();
     private mouseHandler mouse = new mouseHandler(); // Construction of mouseHandler
     private actionHandler acts = new actionHandler(); // Construction of actionHandler
     private GetHex retHex = new GetHex(); //Construction of returnHex
 
     private static final Color BG = Color.WHITE;
     int x1, x2, y1, y2; //x1,y1 represent the x,y coordinates gathered when clicking the mouse IN, x2,y2 represent the mouse being released.
+    int rnd = 1; // Rounding threshold
     private Color colour = new Color(0, 0, 0);
     private int shape = 0; //The shape selected in accordance with the pen tool selected
     private Color colourLine = Color.BLACK; // The colour of shape outlines
@@ -58,6 +60,7 @@ public class PaintCanvas extends JPanel {
     private JButton btnLoad = new JButton("LOAD"); //Load
     private JButton btnUndo = new JButton("UNDO"); //Undo
     private JButton btnClear = new JButton("CLEAR"); //Undo
+    private JCheckBox btnRnd = new JCheckBox("GRID"); //Grid toggle
 
     /**
      * Builds and formats the requisite components.
@@ -65,34 +68,36 @@ public class PaintCanvas extends JPanel {
      * listeners.
      */
     public PaintCanvas() {
-        this.btnPlot.addActionListener(acts);
-        this.btnLine.addActionListener(acts);
-        this.btnRect.addActionListener(acts);
-        this.btnOval.addActionListener(acts);
-        this.btnFill.addActionListener(acts);
-        this.btnCol.addActionListener(acts);
-        this.btnColF.addActionListener(acts);
-        this.btnSave.addActionListener(acts);
-        this.btnLoad.addActionListener(acts);
-        this.btnUndo.addActionListener(acts);
-        this.btnClear.addActionListener(acts);
-        this.pnlBtns.add(this.btnPlot);
-        this.pnlBtns.add(this.btnLine);
-        this.pnlBtns.add(this.btnRect);
-        this.pnlBtns.add(this.btnOval);
-        this.pnlBtns.add(this.btnCol);
-        this.pnlBtns.add(this.btnColF);
-        this.pnlBtns.add(this.btnFill);
-        this.pnlBtns.add(this.btnSave);
-        this.pnlBtns.add(this.btnLoad);
-        this.pnlBtns.add(this.btnUndo);
-        this.pnlBtns.add(this.btnClear);
-        this.btnCol.setBackground(Color.BLACK); //Set default colours for Fill and Line colours.
-        this.btnColF.setBackground(Color.WHITE);
+        btnPlot.addActionListener(acts);
+        btnLine.addActionListener(acts);
+        btnRect.addActionListener(acts);
+        btnOval.addActionListener(acts);
+        btnFill.addActionListener(acts);
+        btnCol.addActionListener(acts);
+        btnColF.addActionListener(acts);
+        btnSave.addActionListener(acts);
+        btnLoad.addActionListener(acts);
+        btnUndo.addActionListener(acts);
+        btnClear.addActionListener(acts);
+        btnRnd.addActionListener(acts);
+        pnlBtns.add(btnPlot);
+        pnlBtns.add(btnLine);
+        pnlBtns.add(btnRect);
+        pnlBtns.add(btnOval);
+        pnlBtns.add(btnCol);
+        pnlBtns.add(btnColF);
+        pnlBtns.add(btnFill);
+        pnlBtns.add(btnSave);
+        pnlBtns.add(btnLoad);
+        pnlBtns.add(btnUndo);
+        pnlBtns.add(btnClear);
+        pnlBtns.add(btnRnd);
+        btnCol.setBackground(Color.BLACK); //Set default colours for Fill and Line colours.
+        btnColF.setBackground(Color.WHITE);
 
-        this.add(this.pnlBtns, "North");
-        this.add(this.pnlCanvas, "Center");
-        this.addMouseListener(this.mouse);
+        add(pnlBtns, "North");
+        add(pnlCanvas, "Center");
+        addMouseListener(mouse);
         nullBtns(); //set background colour of all buttons (excepting Col and ColF) to null.
         btnPlot.setBackground(Color.CYAN); //Set background of Plot to Cyan as it is selected by default.
     }
@@ -104,8 +109,8 @@ public class PaintCanvas extends JPanel {
      * @return encoded position of x as percentage of screen width
      */
     public float encodeX(int width) { //encode pixel location to percentage of total screen width
-        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        float pixels = (float)Math.round(screenSize.height * 0.85);
+        int screenX = getWidth();
+        float pixels = (float)Math.round(screenX * 0.85);
         float decimal = (width/pixels);
         return decimal; //Return a percentage of the screen width
     }
@@ -117,8 +122,8 @@ public class PaintCanvas extends JPanel {
      * @return encoded position of y as percentage of screen height
      */
     public float encodeY(int height) {
-        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        float pixels = (float)Math.round(screenSize.height * 0.85);
+        int screenY = getHeight();
+        float pixels = (float)Math.round(getHeight() * 0.85);
         float decimal = (height/pixels);
         return decimal;//Return a percentage of the screen height
     }
@@ -130,8 +135,8 @@ public class PaintCanvas extends JPanel {
      * @return position on screen in pixels
      */
     public int decodeX(float width) {
-        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        float pixels = (float)Math.round(screenSize.height * 0.85);
+        int screenX = getX();
+        float pixels = (float)Math.round(getWidth() * 0.85);
         int location = (int)Math.round(width*pixels);
         return location;//Convert Screen width percentage into pixel integer
     }
@@ -143,7 +148,7 @@ public class PaintCanvas extends JPanel {
      */
     public int decodeY(float height) {
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        float pixels = (float)Math.round(screenSize.height * 0.85);
+        float pixels = (float)Math.round(getHeight() * 0.85);
         int location = (int)Math.round(height*pixels);
         return location;//Convert Screen height percentage into pixel integer
     }
@@ -202,6 +207,11 @@ public class PaintCanvas extends JPanel {
                     }
                 }
             }
+            for (int i = 0; i < grid.size() ; ++i ){
+                g.setColor(colour.LIGHT_GRAY);
+                g.drawLine(0,10*i+5,getWidth(),10*i+5);
+                g.drawLine((10*i)+5,0,10*i+5,getHeight());
+            }
         }
     }
 
@@ -227,8 +237,8 @@ public class PaintCanvas extends JPanel {
          * @param me mouseEvent listens for mouse clicks
          */
         public void mousePressed(MouseEvent me) {
-            x1 = me.getX();
-            y1 = me.getY();
+            x1 = Math.round(me.getX()/rnd)*rnd;
+            y1 = Math.round(me.getY()*rnd)/rnd;
             repaint();
         }
 
@@ -248,26 +258,26 @@ public class PaintCanvas extends JPanel {
 
             switch (PaintCanvas.this.shape) {
                 case 0:
-                    x2 = me.getX();
-                    y2 = me.getY();
+                    x2 = Math.round(me.getX()/rnd)*rnd;
+                    y2 = Math.round(me.getY()/rnd)*rnd;
                     entries.add(new Plot(encodeX(x2), encodeY(y2), colourLine));
                     repaint();
                     break;
                 case 1:
-                    x2 = me.getX();
-                    y2 = me.getY();
+                    x2 = Math.round(me.getX()/rnd)*rnd;
+                    y2 = Math.round(me.getY()/rnd)*rnd;
                     entries.add(new Line(encodeX(x1), encodeY(y1), encodeX(x2), encodeY(y2), colourLine));
                     repaint();
                     break;
                 case 2:
-                    x2 = me.getX();
-                    y2 = me.getY();
+                    x2 = Math.round(me.getX()/rnd)*rnd;
+                    y2 = Math.round(me.getY()/rnd)*rnd;
                     entries.add(new Rectangle(encodeX(x1), encodeY(y1), encodeX(x2), encodeY(y2),fill, colourFill,colourLine));
                     repaint();
                     break;
                 case 3:
-                    x2 = me.getX();
-                    y2 = me.getY();
+                    x2 = Math.round(me.getX()/rnd)*rnd;
+                    y2 = Math.round(me.getY()/rnd)*rnd;
                     entries.add(new Oval(encodeX(x1), encodeY(y1), encodeX(x2), encodeY(y2),fill, colourFill,colourLine));
                     repaint();
                     break;
@@ -351,6 +361,20 @@ public class PaintCanvas extends JPanel {
             if (a.getSource() == btnClear) {
                 entries.clear();
                 repaint();
+            }
+
+            if(a.getSource() == btnRnd){
+                if (btnRnd.isSelected()){
+                    rnd = 10;
+                    for (int i = 0; i < getHeight(); i++) {
+                        grid.add(new Line(0, 0, 0, 0 , Color.LIGHT_GRAY));
+                    }
+                }else{
+                    rnd = 1;
+                    grid.clear();
+                }
+                repaint();
+
             }
 
             if (a.getSource() == btnLoad) {
