@@ -2,84 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59bf3a8f-11b0-4c20-bf71-f9c01ab40e15" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example1.vec" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/ColorFill.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/ColorLine.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/ColourChooser.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/GetHex.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/Line.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/Load.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/Oval.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/PaintCanvas.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/PaintFrame.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/Plot.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/Rectangle.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/Shapes.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/allclasses-index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/allclasses.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/allpackages-index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/constant-values.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/deprecated-list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/element-list" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/help-doc.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/index-files/index-1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/index-files/index-10.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/index-files/index-2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/index-files/index-3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/index-files/index-4.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/index-files/index-5.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/index-files/index-6.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/index-files/index-7.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/index-files/index-8.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/index-files/index-9.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/jquery/external/jquery/jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/jquery/images/ui-bg_flat_0_aaaaaa_40x100.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/jquery/images/ui-bg_flat_75_ffffff_40x100.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/jquery/images/ui-bg_glass_55_fbf9ee_1x400.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/jquery/images/ui-bg_glass_65_ffffff_1x400.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/jquery/images/ui-bg_glass_75_dadada_1x400.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/jquery/images/ui-bg_glass_75_e6e6e6_1x400.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/jquery/images/ui-bg_glass_95_fef1ec_1x400.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/jquery/images/ui-bg_highlight-soft_75_cccccc_1x100.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/jquery/images/ui-icons_222222_256x240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/jquery/images/ui-icons_2e83ff_256x240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/jquery/images/ui-icons_454545_256x240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/jquery/images/ui-icons_888888_256x240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/jquery/images/ui-icons_cd0a0a_256x240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/jquery/jquery-3.3.1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/jquery/jquery-migrate-3.0.1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/jquery/jquery-ui.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/jquery/jquery-ui.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/jquery/jquery-ui.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/jquery/jquery-ui.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/jquery/jquery-ui.structure.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/jquery/jquery-ui.structure.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/jquery/jszip-utils/dist/jszip-utils-ie.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/jquery/jszip-utils/dist/jszip-utils-ie.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/jquery/jszip-utils/dist/jszip-utils.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/jquery/jszip-utils/dist/jszip-utils.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/jquery/jszip/dist/jszip.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/jquery/jszip/dist/jszip.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/main.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/member-search-index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/member-search-index.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/overview-tree.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/package-search-index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/package-search-index.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/package-summary.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/package-tree.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/resources/glass.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/resources/x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/search.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/serialized-form.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/stylesheet.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/type-search-index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/type-search-index.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/302-Ass2-169/PaintCanvas$actionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/302-Ass2-169/PaintCanvas$actionHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/302-Ass2-169/PaintCanvas$mouseHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/302-Ass2-169/PaintCanvas$mouseHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/302-Ass2-169/PaintCanvas.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/302-Ass2-169/PaintCanvas.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PaintCanvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaintCanvas.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -87,33 +14,22 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DefaultGradleProjectSettings">
-    <option name="isMigrated" value="true" />
-  </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PaintCanvas.java">
+        <entry file="file://$PROJECT_DIR$/src/PaintFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="767">
-              <caret line="475" column="13" selection-start-line="475" selection-start-column="13" selection-end-line="475" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="102">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/TestJunit.java">
+        <entry file="file://$PROJECT_DIR$/src/PaintCanvas.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-251">
-              <caret line="4" column="49" selection-start-line="4" selection-start-column="49" selection-end-line="4" selection-end-column="49" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2631#2632#0" expanded="true" />
-                <element signature="e#2683#2684#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="294">
+              <caret line="336" column="5" lean-forward="true" selection-start-line="336" selection-start-column="5" selection-end-line="336" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -132,6 +48,7 @@
       <find>save</find>
       <find>system.out.printLn</find>
       <find>fill</find>
+      <find>actionHandler</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -154,12 +71,14 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/untitled2/src/TestJunit.java" />
         <option value="$PROJECT_DIR$/untitled2/src/PaintCanvas.java" />
+        <option value="$PROJECT_DIR$/src/Inputs.java" />
+        <option value="$PROJECT_DIR$/src/PaintCanvas.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="400" />
-    <option name="y" value="59" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="2771" />
+    <option name="y" value="-19" />
     <option name="width" value="1932" />
     <option name="height" value="1052" />
   </component>
@@ -193,8 +112,7 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559275879329" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559289961549" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -217,7 +135,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestJunit">
+  <component name="RunManager" selected="Application.main">
     <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main" />
       <module name="302-Ass2-169" />
@@ -236,8 +154,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestJunit" />
         <item itemvalue="Application.main" />
+        <item itemvalue="JUnit.TestJunit" />
       </list>
     </recent_temporary>
   </component>
@@ -255,6 +173,9 @@
     <servers />
   </component>
   <component name="TestHistory">
+    <history-entry file="TestJunit - 2019.05.31 at 13h 54m 33s.xml">
+      <configuration name="TestJunit" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="TestJunit - 2019.05.31 at 13h 56m 45s.xml">
       <configuration name="TestJunit" configurationId="JUnit" />
     </history-entry>
@@ -276,20 +197,18 @@
     <history-entry file="TestJunit - 2019.05.31 at 14h 06m 31s.xml">
       <configuration name="TestJunit" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestJunit - 2019.05.31 at 14h 52m 42s.xml">
+    <history-entry file="TestJunit - 2019.05.31 at 14h 58m 07s.xml">
       <configuration name="TestJunit" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestJunit - 2019.05.31 at 14h 53m 48s.xml">
-      <configuration name="TestJunit" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestJunit - 2019.05.31 at 14h 57m 07s.xml">
+    <history-entry file="TestJunit - 2019.05.31 at 17h 46m 50s.xml">
       <configuration name="TestJunit" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="400" y="59" width="1932" height="1052" extended-state="0" />
+    <frame x="2552" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1474359" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24946696" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -298,15 +217,15 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32969603" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32752994" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39934713" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.45503792" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39869988" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32861805" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32969603" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -317,9 +236,6 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
   </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/302_Ass2_169$TestJunit.ic" NAME="TestJunit Coverage Results" MODIFIED="1559279015017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/untitled2.iml">
       <provider selected="true" editor-type-id="text-editor">
@@ -329,7 +245,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/untitled2/src/ColorLine.java" />
-    <entry file="file://$PROJECT_DIR$/out/allclasses.html" />
+    <entry file="file://$PROJECT_DIR$/out/allclasses.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="82" lean-forward="true" selection-start-line="31" selection-start-column="82" selection-end-line="31" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/untitled2/save.vec" />
     <entry file="file://$PROJECT_DIR$/untitled2/src/ColorFill.java" />
     <entry file="file://$PROJECT_DIR$/save.vec" />
@@ -354,7 +276,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TRELLO.txt" />
+    <entry file="file://$PROJECT_DIR$/TRELLO.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -368,9 +292,6 @@
           <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PaintFrame.java">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Plot.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -393,7 +314,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md" />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TestJunit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="548">
+          <caret line="125" column="22" selection-start-line="125" selection-start-column="22" selection-end-line="125" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ColourChooser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -404,25 +338,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PaintCanvas.java">
+    <entry file="file://$PROJECT_DIR$/src/Inputs.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="767">
-          <caret line="475" column="13" selection-start-line="475" selection-start-column="13" selection-end-line="475" selection-end-column="13" />
+        <state relative-caret-position="204">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TestJunit.java">
+    <entry file="file://$PROJECT_DIR$/src/PaintFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-251">
-          <caret line="4" column="49" selection-start-line="4" selection-start-column="49" selection-end-line="4" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2631#2632#0" expanded="true" />
-            <element signature="e#2683#2684#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="102">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PaintCanvas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="336" column="5" lean-forward="true" selection-start-line="336" selection-start-column="5" selection-end-line="336" selection-end-column="5" />
         </state>
       </provider>
     </entry>

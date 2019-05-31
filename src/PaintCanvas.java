@@ -5,6 +5,7 @@ import java.io.*;
 import java.util.ArrayList;
 import javax.swing.JButton;
 import javax.swing.JPanel;
+import javax.swing.text.JTextComponent;
 
 /**
  * The PaintCanvas class gathers mouse click coordinates,
@@ -31,7 +32,7 @@ public class PaintCanvas extends JPanel {
     private ArrayList<Shapes> entries = new ArrayList(); //The main array for storing entries of shapes, complete with coordinates and colours
     private ArrayList<Shapes> grid = new ArrayList();
     private mouseHandler mouse = new mouseHandler(); // Construction of mouseHandler
-    private actionHandler acts = new actionHandler(); // Construction of actionHandler
+    private actionHandler acts = new actionHandler(); // Construction of
     private GetHex retHex = new GetHex(); //Construction of returnHex
 
     private static final Color BG = Color.WHITE;
@@ -79,6 +80,12 @@ public class PaintCanvas extends JPanel {
         btnUndo.addActionListener(acts);
         btnClear.addActionListener(acts);
         btnRnd.addActionListener(acts);
+        btnPlot.addKeyListener(new inputs());
+        btnLine.addKeyListener(new inputs());
+        btnRect.addKeyListener(new inputs());
+        btnOval.addKeyListener(new inputs());
+        btnFill.addKeyListener(new inputs());
+        btnUndo.addKeyListener(new inputs());
         pnlBtns.add(btnPlot);
         pnlBtns.add(btnLine);
         pnlBtns.add(btnRect);
@@ -307,6 +314,8 @@ public class PaintCanvas extends JPanel {
 
     }
 
+
+
     /**
      * Sets the background colour of all buttons to null
      */
@@ -317,10 +326,18 @@ public class PaintCanvas extends JPanel {
         btnOval.setBackground((Color)null);
     }
 
+    private class inputs extends KeyAdapter{
+        public void keyPressed(KeyEvent e){
+            int keys = e.getKeyCode();
+            if(e.isControlDown() && keys==KeyEvent.VK_Z){
+                entries.remove(entries.size()-1);
+                repaint();
+            }
+        }
+    }
     private class actionHandler implements ActionListener {
         private actionHandler() {
         }
-
         /**
          * Defines the actions of each button on the buttonPanel
          * <p>
