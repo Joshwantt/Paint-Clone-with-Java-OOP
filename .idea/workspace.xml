@@ -2,268 +2,84 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59bf3a8f-11b0-4c20-bf71-f9c01ab40e15" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/untitled2/example1.vec" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/example1.vec" beforeDir="false" afterPath="$PROJECT_DIR$/example1.vec" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/ColorFill.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/ColorFill.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/ColorFill.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/ColorLine.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/ColorLine.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/ColorLine.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/ColourChooser.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/ColourChooser.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/ColourChooser.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/GetHex.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/GetHex.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/GetHex.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/Line.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/Line.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/Line.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/Load.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/Load.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/Load.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/Oval.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/Oval.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/Oval.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/PaintCanvas.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/PaintCanvas.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/PaintCanvas.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/PaintFrame.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/PaintFrame.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/PaintFrame.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/Plot.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/Plot.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/Plot.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/Rectangle.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/Rectangle.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/Rectangle.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/Shapes.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/Shapes.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/Shapes.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/allclasses-index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/allclasses-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/allclasses-index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/allclasses.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/allclasses.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/allclasses.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/allpackages-index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/allpackages-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/allpackages-index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/constant-values.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/constant-values.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/constant-values.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/deprecated-list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/deprecated-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/deprecated-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/element-list" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/element-list" beforeDir="false" afterPath="$PROJECT_DIR$/out/element-list" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/help-doc.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/help-doc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/index-files/index-1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/index-files/index-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/index-files/index-1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/index-files/index-10.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/index-files/index-10.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/index-files/index-10.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/index-files/index-2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/index-files/index-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/index-files/index-2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/index-files/index-3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/index-files/index-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/index-files/index-3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/index-files/index-4.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/index-files/index-4.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/index-files/index-4.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/index-files/index-5.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/index-files/index-5.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/index-files/index-5.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/index-files/index-6.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/index-files/index-6.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/index-files/index-6.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/index-files/index-7.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/index-files/index-7.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/index-files/index-7.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/index-files/index-8.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/index-files/index-8.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/index-files/index-8.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/index-files/index-9.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/index-files/index-9.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/index-files/index-9.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/jquery/external/jquery/jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/jquery/external/jquery/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/jquery/external/jquery/jquery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/jquery/images/ui-bg_flat_0_aaaaaa_40x100.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/jquery/images/ui-bg_flat_0_aaaaaa_40x100.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/jquery/images/ui-bg_flat_0_aaaaaa_40x100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/jquery/images/ui-bg_flat_75_ffffff_40x100.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/jquery/images/ui-bg_flat_75_ffffff_40x100.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/jquery/images/ui-bg_flat_75_ffffff_40x100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/jquery/images/ui-bg_glass_55_fbf9ee_1x400.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/jquery/images/ui-bg_glass_55_fbf9ee_1x400.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/jquery/images/ui-bg_glass_55_fbf9ee_1x400.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/jquery/images/ui-bg_glass_65_ffffff_1x400.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/jquery/images/ui-bg_glass_65_ffffff_1x400.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/jquery/images/ui-bg_glass_65_ffffff_1x400.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/jquery/images/ui-bg_glass_75_dadada_1x400.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/jquery/images/ui-bg_glass_75_dadada_1x400.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/jquery/images/ui-bg_glass_75_dadada_1x400.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/jquery/images/ui-bg_glass_75_e6e6e6_1x400.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/jquery/images/ui-bg_glass_75_e6e6e6_1x400.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/jquery/images/ui-bg_glass_75_e6e6e6_1x400.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/jquery/images/ui-bg_glass_95_fef1ec_1x400.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/jquery/images/ui-bg_glass_95_fef1ec_1x400.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/jquery/images/ui-bg_glass_95_fef1ec_1x400.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/jquery/images/ui-bg_highlight-soft_75_cccccc_1x100.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/jquery/images/ui-bg_highlight-soft_75_cccccc_1x100.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/jquery/images/ui-bg_highlight-soft_75_cccccc_1x100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/jquery/images/ui-icons_222222_256x240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/jquery/images/ui-icons_222222_256x240.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/jquery/images/ui-icons_222222_256x240.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/jquery/images/ui-icons_2e83ff_256x240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/jquery/images/ui-icons_2e83ff_256x240.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/jquery/images/ui-icons_2e83ff_256x240.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/jquery/images/ui-icons_454545_256x240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/jquery/images/ui-icons_454545_256x240.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/jquery/images/ui-icons_454545_256x240.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/jquery/images/ui-icons_888888_256x240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/jquery/images/ui-icons_888888_256x240.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/jquery/images/ui-icons_888888_256x240.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/jquery/images/ui-icons_cd0a0a_256x240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/jquery/images/ui-icons_cd0a0a_256x240.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/jquery/images/ui-icons_cd0a0a_256x240.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/jquery/jquery-3.3.1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/jquery/jquery-3.3.1.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/jquery/jquery-3.3.1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/jquery/jquery-migrate-3.0.1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/jquery/jquery-migrate-3.0.1.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/jquery/jquery-migrate-3.0.1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/jquery/jquery-ui.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/jquery/jquery-ui.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/jquery/jquery-ui.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/jquery/jquery-ui.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/jquery/jquery-ui.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/jquery/jquery-ui.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/jquery/jquery-ui.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/jquery/jquery-ui.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/jquery/jquery-ui.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/jquery/jquery-ui.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/jquery/jquery-ui.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/jquery/jquery-ui.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/jquery/jquery-ui.structure.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/jquery/jquery-ui.structure.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/jquery/jquery-ui.structure.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/jquery/jquery-ui.structure.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/jquery/jquery-ui.structure.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/jquery/jquery-ui.structure.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/jquery/jszip-utils/dist/jszip-utils-ie.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/jquery/jszip-utils/dist/jszip-utils-ie.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/jquery/jszip-utils/dist/jszip-utils-ie.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/jquery/jszip-utils/dist/jszip-utils-ie.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/jquery/jszip-utils/dist/jszip-utils-ie.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/jquery/jszip-utils/dist/jszip-utils-ie.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/jquery/jszip-utils/dist/jszip-utils.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/jquery/jszip-utils/dist/jszip-utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/jquery/jszip-utils/dist/jszip-utils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/jquery/jszip-utils/dist/jszip-utils.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/jquery/jszip-utils/dist/jszip-utils.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/jquery/jszip-utils/dist/jszip-utils.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/jquery/jszip/dist/jszip.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/jquery/jszip/dist/jszip.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/jquery/jszip/dist/jszip.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/jquery/jszip/dist/jszip.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/jquery/jszip/dist/jszip.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/jquery/jszip/dist/jszip.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/main.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/member-search-index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/member-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/member-search-index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/member-search-index.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/member-search-index.zip" beforeDir="false" afterPath="$PROJECT_DIR$/out/member-search-index.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/overview-tree.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/overview-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/package-search-index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/package-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/package-search-index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/package-search-index.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/package-search-index.zip" beforeDir="false" afterPath="$PROJECT_DIR$/out/package-search-index.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/package-summary.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/package-tree.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/302-Ass2-169/ColourChooser$ButtonListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/302-Ass2-169/ColourChooser$ButtonListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/302-Ass2-169/ColourChooser$ButtonListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/302-Ass2-169/ColourChooser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/302-Ass2-169/ColourChooser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/302-Ass2-169/ColourChooser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/302-Ass2-169/GetHex.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/302-Ass2-169/GetHex.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/302-Ass2-169/GetHex.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/302-Ass2-169/Line.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/302-Ass2-169/Line.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/302-Ass2-169/Line.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/302-Ass2-169/Load.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/302-Ass2-169/Load.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/302-Ass2-169/Load.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/302-Ass2-169/META-INF/302-Ass2-169.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/302-Ass2-169/META-INF/302-Ass2-169.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/302-Ass2-169/META-INF/302-Ass2-169.kotlin_module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/302-Ass2-169/Oval.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/302-Ass2-169/Oval.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/302-Ass2-169/Oval.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/302-Ass2-169/PaintCanvas$actionHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/302-Ass2-169/PaintCanvas$actionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/302-Ass2-169/PaintCanvas$actionHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/302-Ass2-169/PaintCanvas$mouseHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/302-Ass2-169/PaintCanvas$mouseHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/302-Ass2-169/PaintCanvas$mouseHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/302-Ass2-169/PaintCanvas.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/302-Ass2-169/PaintCanvas.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/302-Ass2-169/PaintCanvas.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/302-Ass2-169/PaintFrame.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/302-Ass2-169/PaintFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/302-Ass2-169/PaintFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/302-Ass2-169/Plot.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/302-Ass2-169/Plot.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/302-Ass2-169/Plot.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/302-Ass2-169/Rectangle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/302-Ass2-169/Rectangle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/302-Ass2-169/Rectangle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/302-Ass2-169/Shapes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/302-Ass2-169/Shapes.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/302-Ass2-169/Shapes.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/302-Ass2-169/TestJunit.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/302-Ass2-169/TestJunit.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/302-Ass2-169/TestJunit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/302-Ass2-169/main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/302-Ass2-169/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/302-Ass2-169/main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/untitled2/ColourChooser$ButtonListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/untitled2/ColourChooser$ButtonListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled2/ColourChooser$ButtonListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/untitled2/ColourChooser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/untitled2/ColourChooser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled2/ColourChooser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/untitled2/GetHex.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/untitled2/GetHex.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled2/GetHex.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/untitled2/Line.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/untitled2/Line.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled2/Line.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/untitled2/Load.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/untitled2/Load.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled2/Load.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/untitled2/META-INF/untitled2.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/untitled2/META-INF/untitled2.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled2/META-INF/untitled2.kotlin_module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/untitled2/Oval.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/untitled2/Oval.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled2/Oval.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/untitled2/PaintCanvas$actionHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/untitled2/PaintCanvas$actionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled2/PaintCanvas$actionHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/untitled2/PaintCanvas$mouseHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/untitled2/PaintCanvas$mouseHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled2/PaintCanvas$mouseHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/untitled2/PaintCanvas.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/untitled2/PaintCanvas.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled2/PaintCanvas.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/untitled2/PaintFrame.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/untitled2/PaintFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled2/PaintFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/untitled2/Plot.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/untitled2/Plot.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled2/Plot.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/untitled2/Rectangle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/untitled2/Rectangle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled2/Rectangle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/untitled2/Shapes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/untitled2/Shapes.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled2/Shapes.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/untitled2/TestJunit.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/untitled2/TestJunit.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled2/TestJunit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/untitled2/com/intellij/uiDesigner/core/AbstractLayout.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/untitled2/com/intellij/uiDesigner/core/AbstractLayout.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled2/com/intellij/uiDesigner/core/AbstractLayout.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/untitled2/com/intellij/uiDesigner/core/DimensionInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/untitled2/com/intellij/uiDesigner/core/DimensionInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled2/com/intellij/uiDesigner/core/DimensionInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/untitled2/com/intellij/uiDesigner/core/GridConstraints.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/untitled2/com/intellij/uiDesigner/core/GridConstraints.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled2/com/intellij/uiDesigner/core/GridConstraints.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/untitled2/com/intellij/uiDesigner/core/GridLayoutManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/untitled2/com/intellij/uiDesigner/core/GridLayoutManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled2/com/intellij/uiDesigner/core/GridLayoutManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/untitled2/com/intellij/uiDesigner/core/HorizontalInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/untitled2/com/intellij/uiDesigner/core/HorizontalInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled2/com/intellij/uiDesigner/core/HorizontalInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/untitled2/com/intellij/uiDesigner/core/LayoutState.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/untitled2/com/intellij/uiDesigner/core/LayoutState.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled2/com/intellij/uiDesigner/core/LayoutState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/untitled2/com/intellij/uiDesigner/core/Spacer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/untitled2/com/intellij/uiDesigner/core/Spacer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled2/com/intellij/uiDesigner/core/Spacer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/untitled2/com/intellij/uiDesigner/core/SupportCode$TextWithMnemonic.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/untitled2/com/intellij/uiDesigner/core/SupportCode$TextWithMnemonic.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled2/com/intellij/uiDesigner/core/SupportCode$TextWithMnemonic.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/untitled2/com/intellij/uiDesigner/core/SupportCode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/untitled2/com/intellij/uiDesigner/core/SupportCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled2/com/intellij/uiDesigner/core/SupportCode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/untitled2/com/intellij/uiDesigner/core/Util.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/untitled2/com/intellij/uiDesigner/core/Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled2/com/intellij/uiDesigner/core/Util.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/untitled2/com/intellij/uiDesigner/core/VerticalInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/untitled2/com/intellij/uiDesigner/core/VerticalInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled2/com/intellij/uiDesigner/core/VerticalInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/untitled2/main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/production/untitled2/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled2/main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/resources/glass.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/resources/glass.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/resources/glass.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/resources/x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/resources/x.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/resources/x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/search.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/search.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/serialized-form.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/serialized-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/serialized-form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/stylesheet.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/stylesheet.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/type-search-index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/type-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/type-search-index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/type-search-index.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/out/type-search-index.zip" beforeDir="false" afterPath="$PROJECT_DIR$/out/type-search-index.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/src/ColourChooser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/src/ColourChooser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ColourChooser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/src/GetHex.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/src/GetHex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GetHex.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/src/Line.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/src/Line.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Line.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/src/Load.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/src/Load.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Load.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/src/Oval.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/src/Oval.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Oval.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/src/PaintCanvas.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/src/PaintCanvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaintCanvas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/src/PaintFrame.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/src/PaintFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaintFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/src/Plot.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/src/Plot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Plot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/src/Rectangle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/src/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rectangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/src/Shapes.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/src/Shapes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shapes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/src/TestJunit.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/src/TestJunit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestJunit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/src/main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/untitled2.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled2/untitled2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/untitled2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example1.vec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/ColorFill.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/ColorLine.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/ColourChooser.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/GetHex.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/Line.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/Load.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/Oval.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/PaintCanvas.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/PaintFrame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/Plot.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/Rectangle.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/Shapes.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/allclasses-index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/allclasses.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/allpackages-index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/constant-values.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/deprecated-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/element-list" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/help-doc.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/index-files/index-1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/index-files/index-10.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/index-files/index-2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/index-files/index-3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/index-files/index-4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/index-files/index-5.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/index-files/index-6.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/index-files/index-7.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/index-files/index-8.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/index-files/index-9.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/jquery/external/jquery/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/jquery/images/ui-bg_flat_0_aaaaaa_40x100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/jquery/images/ui-bg_flat_75_ffffff_40x100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/jquery/images/ui-bg_glass_55_fbf9ee_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/jquery/images/ui-bg_glass_65_ffffff_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/jquery/images/ui-bg_glass_75_dadada_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/jquery/images/ui-bg_glass_75_e6e6e6_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/jquery/images/ui-bg_glass_95_fef1ec_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/jquery/images/ui-bg_highlight-soft_75_cccccc_1x100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/jquery/images/ui-icons_222222_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/jquery/images/ui-icons_2e83ff_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/jquery/images/ui-icons_454545_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/jquery/images/ui-icons_888888_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/jquery/images/ui-icons_cd0a0a_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/jquery/jquery-3.3.1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/jquery/jquery-migrate-3.0.1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/jquery/jquery-ui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/jquery/jquery-ui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/jquery/jquery-ui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/jquery/jquery-ui.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/jquery/jquery-ui.structure.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/jquery/jquery-ui.structure.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/jquery/jszip-utils/dist/jszip-utils-ie.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/jquery/jszip-utils/dist/jszip-utils-ie.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/jquery/jszip-utils/dist/jszip-utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/jquery/jszip-utils/dist/jszip-utils.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/jquery/jszip/dist/jszip.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/jquery/jszip/dist/jszip.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/main.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/member-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/member-search-index.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/overview-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/package-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/package-search-index.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/resources/glass.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/resources/x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/search.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/serialized-form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/stylesheet.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/type-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/type-search-index.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled2.iml" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -271,15 +87,32 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PaintCanvas.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="767">
+              <caret line="475" column="13" selection-start-line="475" selection-start-column="13" selection-end-line="475" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/TestJunit.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-251">
+              <caret line="4" column="49" selection-start-line="4" selection-start-column="49" selection-end-line="4" selection-end-column="49" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2631#2632#0" expanded="true" />
+                <element signature="e#2683#2684#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -335,6 +168,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -352,7 +186,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -360,6 +193,7 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559275879329" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
@@ -421,9 +255,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestJunit - 2019.05.31 at 13h 54m 33s.xml">
-      <configuration name="TestJunit" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TestJunit - 2019.05.31 at 13h 56m 45s.xml">
       <configuration name="TestJunit" configurationId="JUnit" />
     </history-entry>
@@ -445,12 +276,20 @@
     <history-entry file="TestJunit - 2019.05.31 at 14h 06m 31s.xml">
       <configuration name="TestJunit" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TestJunit - 2019.05.31 at 14h 52m 42s.xml">
+      <configuration name="TestJunit" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestJunit - 2019.05.31 at 14h 53m 48s.xml">
+      <configuration name="TestJunit" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestJunit - 2019.05.31 at 14h 57m 07s.xml">
+      <configuration name="TestJunit" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="400" y="59" width="1932" height="1052" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14423077" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1474359" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -459,7 +298,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32969603" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32752994" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32752994" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39934713" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -467,7 +306,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32969603" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32861805" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -478,6 +317,9 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
   </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/302_Ass2_169$TestJunit.ic" NAME="TestJunit Coverage Results" MODIFIED="1559279015017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/untitled2.iml">
       <provider selected="true" editor-type-id="text-editor">
@@ -487,13 +329,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/untitled2/src/ColorLine.java" />
-    <entry file="file://$PROJECT_DIR$/out/allclasses.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="82" lean-forward="true" selection-start-line="31" selection-start-column="82" selection-end-line="31" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/out/allclasses.html" />
     <entry file="file://$PROJECT_DIR$/untitled2/save.vec" />
     <entry file="file://$PROJECT_DIR$/untitled2/src/ColorFill.java" />
     <entry file="file://$PROJECT_DIR$/save.vec" />
@@ -518,9 +354,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TRELLO.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/TRELLO.txt" />
     <entry file="file://$PROJECT_DIR$/src/main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -559,25 +393,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TestJunit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="548">
-          <caret line="125" column="22" selection-start-line="125" selection-start-column="22" selection-end-line="125" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2631#2632#0" expanded="true" />
-            <element signature="e#2675#2676#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md" />
     <entry file="file://$PROJECT_DIR$/src/ColourChooser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -590,10 +406,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PaintCanvas.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="767">
+          <caret line="475" column="13" selection-start-line="475" selection-start-column="13" selection-end-line="475" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TestJunit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-251">
+          <caret line="4" column="49" selection-start-line="4" selection-start-column="49" selection-end-line="4" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2631#2632#0" expanded="true" />
+            <element signature="e#2683#2684#0" expanded="true" />
           </folding>
         </state>
       </provider>
