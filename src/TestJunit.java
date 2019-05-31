@@ -136,7 +136,7 @@ public class TestJunit extends PaintCanvas {
 
     @Test
     public void testGetHex() {
-        assertEquals("#FFFFFF", retHex.returnHex(Color.WHITE));
+        Assertions.assertEquals("#FFFFFF", retHex.returnHex(Color.WHITE));
     }
 
 }
