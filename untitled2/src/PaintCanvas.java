@@ -6,9 +6,6 @@ import java.util.ArrayList;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
-
-import static javax.swing.UIManager.get;
-
 /**
  * The PaintCanvas class gathers mouse click coordinates,
  * colours and shape data in order to display a series

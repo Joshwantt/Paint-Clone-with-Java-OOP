@@ -1,5 +1,8 @@
 import java.awt.*;
-
+/**
+ * Returns Hex code
+ * Create, set and get a hexadecimal code based on the colour chosen by the user.
+ */
 public class GetHex {
 
 
