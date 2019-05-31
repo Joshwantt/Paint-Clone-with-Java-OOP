@@ -108,8 +108,7 @@ public class PaintCanvas extends JPanel {
      * @return encoded position of x as percentage of screen width
      */
     public float encodeX(int width) { //encode pixel location to percentage of total screen width
-        int screenX = getWidth();
-        float pixels = (float)Math.round(screenX * 0.85);
+        float pixels = (float)Math.round(getWidth() * 0.85);
         float decimal = (width/pixels);
         return decimal; //Return a percentage of the screen width
     }
@@ -121,7 +120,6 @@ public class PaintCanvas extends JPanel {
      * @return encoded position of y as percentage of screen height
      */
     public float encodeY(int height) {
-        int screenY = getHeight();
         float pixels = (float)Math.round(getHeight() * 0.85);
         float decimal = (height/pixels);
         return decimal;//Return a percentage of the screen height
@@ -134,9 +132,8 @@ public class PaintCanvas extends JPanel {
      * @return position on screen in pixels
      */
     public int decodeX(float width) {
-        int screenX = getX();
         float pixels = (float)Math.round(getWidth() * 0.85);
-        int location = (int)Math.round(width*pixels);
+        int location = Math.round(width*pixels);
         return location;//Convert Screen width percentage into pixel integer
     }
     /**
@@ -146,9 +143,8 @@ public class PaintCanvas extends JPanel {
      * @return position on screen in pixels
      */
     public int decodeY(float height) {
-        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         float pixels = (float)Math.round(getHeight() * 0.85);
-        int location = (int)Math.round(height*pixels);
+        int location = Math.round(height*pixels);
         return location;//Convert Screen height percentage into pixel integer
     }
 
@@ -338,17 +334,14 @@ public class PaintCanvas extends JPanel {
                 btnOval.setBackground(Color.CYAN);
             }
             if (a.getSource() == btnCol) {
-                String hexL = "#"+Integer.toHexString(colourLine.getRGB()).substring(2);
                 //Open the colour picker dialogue box
                 Color c = JColorChooser.showDialog(null,"Primary Colour",Color.BLACK,false);
                 btnCol.setBackground(c); //set the Background of the Colour Button to the selected colour.
-                //entries.add(new ColorFill(c));
                 colourLine = c; //Publish the selected colour
             }
             if (a.getSource() == btnColF) {
                 Color c2 = JColorChooser.showDialog(null,"Secondary Colour",Color.WHITE,false);
                 btnColF.setBackground(c2);
-                //entries.add(new ColorFill(c2));
                 colourFill = c2;
             }
 
